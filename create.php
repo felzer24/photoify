@@ -1,9 +1,7 @@
 <?php require __DIR__.'/views/header.php'; ?>
 
-<section>
-
+<section class="start-screens">
     <form class="user-action-form" action="/app/users/create.php" method="post">
-
         <label for="fname">Firstname</label>
         <input id="fname" type="text" name="fname" placeholder="Firstname" required />
 
@@ -21,8 +19,8 @@
 
         <button type="submit" name="create">Create Account</button>
 
+        <a href="#">Already have an account ?</a>
     </form>
-
 </section>
 
 <?php require __DIR__.'/views/footer.php'; ?>

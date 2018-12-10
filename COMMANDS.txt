@@ -1,0 +1,44 @@
+
+Example1:
+
+INSERT INTO users (email,firstname,lastname,username,password,created_at)
+VALUES ('fredrik@leemann.se','Fredrik','Leemann','freddan88','1234',datetime('now', 'localtime'));
+
+CREATE TABLE IF NOT EXISTS "users" (
+  `id`	        INTEGER PRIMARY KEY AUTOINCREMENT,
+	`email`	      TEXT NOT NULL UNIQUE,
+	`firstname`	  TEXT NOT NULL,
+	`lastname`	  TEXT NOT NULL,
+	`username`	  TEXT NOT NULL UNIQUE,
+	`password`	  TEXT NOT NULL,
+	`profile_pic`	TEXT DEFAULT "default.jpg",
+	`profile_bio`	TEXT,
+	`created_at`	TEXT NOT NULL
+);
+
+-----------
+
+Example2:
+
+INSERT INTO users (email,firstname,lastname,username,password,created_at)
+VALUES ('fredrik@leemann.se','Fredrik','Leemann','freddan88','1234',strftime('%s','now','localtime'));
+
+CREATE TABLE IF NOT EXISTS "users" (
+  `id`	        INTEGER PRIMARY KEY AUTOINCREMENT,
+	`email`	      TEXT NOT NULL UNIQUE,
+	`firstname`	  TEXT NOT NULL,
+	`lastname`	  TEXT NOT NULL,
+	`username`	  TEXT NOT NULL UNIQUE,
+	`password`	  TEXT NOT NULL,
+	`profile_pic`	TEXT DEFAULT "default.jpg",
+	`profile_bio`	TEXT,
+	`created_at`	INTEGER NOT NULL
+);
+
+select *, datetime(created_at,'unixepoch') AS 'created_formated' from users;
+
+-------------------------------
+
+echo(date("Y-m-d H:i:s ",$t));
+$t=time();
+date_default_timezone_set('CET');
