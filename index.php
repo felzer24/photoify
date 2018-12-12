@@ -1,3 +1,7 @@
+<?php
+    require __DIR__.'/app/autoload.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,22 +15,36 @@
   <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="/assets/styles/mobile.css" type="text/css" />
-  <link rel="stylesheet" href="/assets/styles/tablet.css" type="text/css" />
-  <link rel="stylesheet" href="/assets/styles/desktop.css" type="text/css" />
+  <!-- <link rel="stylesheet" href="/assets/styles/tablet.css" type="text/css" />
+  <link rel="stylesheet" href="/assets/styles/desktop.css" type="text/css" /> -->
   <meta name="description" content="Christmas project 2018 Photoify" />
-  <meta name="keywords" content="Photoify, Project, Yrgo, School, Login, database, PHP"/>
+  <meta name="keywords" content="Photoify, Project, School, Login, database, PHP"/>
   <title>Photoify</title>
 </head>
 <body>
-  <header class="main-header">
-    <div class="logo">
-      <h1>PhotoifyApp.com</h1>
-    </div>
-  </header>
+    <header class="main-header">
+
+      <div class="logo">
+        <h1>PhotoifyApp.com</h1>
+      </div>
+
+      <?php if (isset($_SESSION['login-success'])): ?>
+          <div class=" banner success">
+              <p><?php echo $_SESSION['login-success']; ?></p>
+          </div>
+      <?php endif; ?>
+
+      <?php if (isset($_SESSION['login-error'])): ?>
+          <div class="banner error">
+              <p><?php echo $_SESSION['login-error']; ?></p>
+          </div>
+      <?php endif; ?>
+
+    </header>
   <main>
     <section class="login-section">
 
-      <form action="" class="user-action-form" method="post">
+      <form action="/app/users/signin-app.php" class="user-action-form" method="post">
         <h3>Login</h3>
 
         <label for="username">Username</label>
@@ -37,9 +55,14 @@
 
         <button type="submit" name="create">Login</button>
 
-        <a href="create.php">Don´t have an account ?</a>
+        <a href="signup.php">Don´t have an account ?</a>
         <a href="#">I forgot my account</a>
       </form>
+
+      <?php
+          unset($_SESSION['login-error']);
+          unset($_SESSION['login-success']);
+      ?>
 
     </section>
   </main>
