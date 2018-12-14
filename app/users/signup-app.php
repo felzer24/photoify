@@ -49,6 +49,7 @@ if (isset($_POST['name'], $_POST['email'], $_POST['username'], $_POST['password'
     $statement->bindParam(':user', $user, PDO::PARAM_STR);
     $statement->bindParam(':pass', $pass, PDO::PARAM_STR);
     $statement->execute();
+
     $_SESSION['login-success'] = 'You are now registred';
     redirect('/index.php');
 }

@@ -27,7 +27,7 @@ if(isset($_POST['username'], $_POST['password'])){
         if(password_verify($pass, $credentials['password'])){
             $_SESSION['login-success'] ='You provided right credentials';
 
-            $_SESSION['user'] = [
+            $_SESSION['logedin'] = [
                 'id' => $credentials['id'],
                 'email' => $credentials['email'],
                 'name' => $credentials['name'],
@@ -36,7 +36,7 @@ if(isset($_POST['username'], $_POST['password'])){
                 'profile_bio' => $credentials['profile_bio'],
                 'created_at' => $credentials['created_at']
             ];
-            redirect('../../index.php');
+            redirect('../../page.php');
         }
     }
 }
