@@ -36,7 +36,7 @@ if(isset($_POST['username'], $_POST['password'])){
                 'profile_bio' => $credentials['profile_bio'],
                 'created_at' => $credentials['created_at']
             ];
-            redirect('../../page.php');
+            redirect('../../account.php');
         }
     }
 }

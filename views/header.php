@@ -21,11 +21,11 @@
   <meta name="keywords" content="Photoify, Project, School, Login, database, PHP"/>
   <title>Photoify</title>
 </head>
-    
+
 <?php
     if(isset($_SESSION['logedin'])){
-        redirect('page.php');
+        redirect('account.php');
     }
-    
+
     require __DIR__.'/navigation.php';
 ?>
