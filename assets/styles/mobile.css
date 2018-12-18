@@ -1,3 +1,5 @@
+/* CSS Variables */
+
 :root{
   --page-bg: #F2F2F2;
   --granite: #686868;
@@ -77,6 +79,7 @@ input, select{
   padding: 5px 0;
   margin: 0 auto;
   background-color: var(--buttons);
+  cursor: pointer;
   color: white;
 }
 
