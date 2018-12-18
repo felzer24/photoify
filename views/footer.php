@@ -1,8 +1,8 @@
-<?php
-    unset($_SESSION['login-error']);
-    unset($_SESSION['login-success']);
-?>
-
-    <script src="/assets/scripts/script.js"></script>
+    <script src="/assets/scripts/main.js"></script>
+    <?php
+        unset($_SESSION['errors']);
+        unset($_SESSION['values']);
+        unset($_SESSION['success']);
+    ?>
 </body>
 </html>

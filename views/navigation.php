@@ -1,20 +1,12 @@
-<body>
-    <header class="main-header">
+<header>
+    <nav>
+        <!-- <a class="nav-link <?php // echo $_SERVER['SCRIPT_NAME'] === '/index.php' ? 'active' : ''; ?>" href="/index.php">Home</a> -->
+        <!-- <a class="nav-link <?php // echo $_SERVER['SCRIPT_NAME'] === '/about.php' ? 'active' : ''; ?>" href="/about.php">About</a> -->
+    </nav>
+</header>
 
-    <div class="logo">
-        <h1>PhotoifyApp.com</h1>
-      </div>
-
-      <?php if (isset($_SESSION['login-success'])): ?>
-          <div class=" banner success">
-              <p><?php echo $_SESSION['login-success']; ?></p>
-          </div>
-      <?php endif; ?>
-
-      <?php if (isset($_SESSION['login-error'])): ?>
-          <div class="banner error">
-              <p><?php echo $_SESSION['login-error']; ?></p>
-          </div>
-      <?php endif; ?>
-
-    </header>
+<!-- <?php // if (isset($_SESSION['user'])): ?>
+    <a class="nav-link" href="/app/users/logout.php">Logout</a>
+<?php // else: ?>
+    <a class="nav-link <?php // echo $_SERVER['SCRIPT_NAME'] === '/login.php' ? 'active' : ''; ?>" href="login.php">Login</a>
+<?php // endif; ?> -->
