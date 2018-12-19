@@ -12,7 +12,7 @@ if (isset($_SESSION['logedin'])) {
 <main>
     <h3>Photoify Create Account</h3>
 
-    <form class="user-action-forms signup-form" action="app/users/signup_app.php" method="post">
+    <form class="user-action-forms signup-form" action="app/users/signup.app_users.php" method="post">
 
         <div class="banner-messages <?= $_SESSION['banner']['class'] ?? '' ?>">
             <?= $_SESSION['banner']['message'] ?? '' ?>

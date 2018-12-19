@@ -31,7 +31,7 @@ if (!isset($_SESSION['logedin'])) {
         <?= $_SESSION['banner']['message'] ?? '' ?>
     </div>
 
-    <form action="app/users/update_profile_app.php" method="post" enctype="multipart/form-data">
+    <form action="app/users/update.app_users.php" method="post" enctype="multipart/form-data">
 
         <img src="assets/images/profiles/<?= $_SESSION['logedin']['profile_pic'] ?>" alt="Profile picture for <?= $_SESSION['logedin']['username'] ?>" />
 
@@ -42,7 +42,7 @@ if (!isset($_SESSION['logedin'])) {
         <button type="submit" name="update_profile-btn">Save Changes</button>
     </form>
 
-    <a style="color: white;" href="app/users/logout_app.php?clicked=true" title="Logout">Logout</a>
+    <a style="color: white;" href="app/users/logout.app_users.php?clicked=true" title="Logout">Logout</a>
 </main>
 
 <?php require __DIR__.'/views/footer.php'; ?>
