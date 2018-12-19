@@ -35,7 +35,8 @@ if (!isset($_SESSION['logedin'])) {
 
         <img src="assets/images/profiles/<?= $_SESSION['logedin']['profile_pic'] ?>" alt="Profile picture for <?= $_SESSION['logedin']['username'] ?>" />
 
-        <label for="avatar">Upload your avatar Accepted formats: jpg/jpeg/gif/png Max filezise: 2MB</label>
+        <label for="avatar">Upload your avatar here...<br />
+        Accepted formats: jpg/jpeg/gif/png Max filezise: 2MB</label>
         <input id="avatar" type="file" accept=".jpg, .jpeg, .gif, .png" name="profile_pic" />
 
         <button type="submit" name="update_profile-btn">Save Changes</button>
