@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 require __DIR__.'/../autoload.php';
 
-if(isset($_POST['signup-btn'])){
+if (isset($_POST['signup-btn'])) {
 
     $email = trim(filter_var($_POST['email'], FILTER_SANITIZE_EMAIL));
     $fullname = trim(filter_var($_POST['fullname'], FILTER_SANITIZE_STRING));
@@ -13,30 +13,30 @@ if(isset($_POST['signup-btn'])){
     $npassword = $_POST['npassword'];
     $rpassword = $_POST['rpassword'];
 
-    if(empty($email) || filter_var($email, FILTER_VALIDATE_EMAIL) != true){
+    if (empty($email) || filter_var($email, FILTER_VALIDATE_EMAIL) != true) {
         $_SESSION['errors']['email'] = 'Please provide a valid email';
     } else {
         $_SESSION['values']['email'] = $email;
     }
-    if(empty($username)){
+    if (empty($username)) {
         $_SESSION['errors']['username'] = 'Please provide a username';
     } else {
         $_SESSION['values']['username'] = $username;
     }
-    if(!empty($fullname)){
+    if (!empty($fullname)) {
         $_SESSION['values']['fullname'] = $fullname;
     }
-    if(empty($npassword)){
+    if (empty($npassword)) {
         $_SESSION['errors']['npassword'] = 'You need to set a password';
     }
-    if(empty($rpassword)){
+    if (empty($rpassword)) {
         $_SESSION['errors']['rpassword'] = 'Repeat your password';
     }
 
-    if(isset($_SESSION['errors']) && count($_SESSION['errors']) > 0){
+    if (isset($_SESSION['errors']) && count($_SESSION['errors']) > 0) {
         $_SESSION['banner']['message'] = 'Check fields for errors';
         $_SESSION['banner']['class'] = 'error';
-        redirect('../../signup.php');
+        redirect('/signup.php');
         exit();
     }
 
@@ -45,7 +45,7 @@ if(isset($_POST['signup-btn'])){
         $_SESSION['errors']['rpassword'] = 'Password does not match';
         $_SESSION['banner']['message'] = 'Check fields for errors';
         $_SESSION['banner']['class'] = 'error';
-        redirect('../../signup.php');
+        redirect('/signup.php');
         exit();
     }
 
@@ -61,12 +61,12 @@ if(isset($_POST['signup-btn'])){
 
     $credentials = $statement->fetch(PDO::FETCH_ASSOC);
 
-    if($credentials['username'] === $username || $credentials['email'] === $email){
+    if ($credentials['username'] === $username || $credentials['email'] === $email) {
         unset($_SESSION['errors']);
         unset($_SESSION['values']);
         $_SESSION['banner']['message'] = 'Email or Password already registred';
         $_SESSION['banner']['class'] = 'error';
-        redirect('../../signup.php');
+        redirect('/signup.php');
     }
 
     $password = password_hash($npassword, PASSWORD_DEFAULT);
@@ -88,6 +88,9 @@ if(isset($_POST['signup-btn'])){
     $_SESSION['banner']['class'] = 'success';
     redirect('/');
     exit();
+
 } else {
-    redirect('../../signup.php');
+
+    redirect('/signup.php');
+
 }

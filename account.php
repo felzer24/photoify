@@ -5,7 +5,7 @@
 
     <?php var_dump($_SESSION['logedin']); ?>
 
-    <a style="color: white;" href="app/users/logout_app.php" title="Logout">Logout</a>
+    <a style="color: white;" href="app/users/logout_app.php?clicked=true" title="Logout">Logout</a>
 </main>
 
 <?php require __DIR__.'/views/footer.php'; ?>

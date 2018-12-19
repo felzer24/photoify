@@ -4,20 +4,20 @@ declare(strict_types=1);
 
 require __DIR__.'/../autoload.php';
 
-if(isset($_POST['login-btn'])){
+if (isset($_POST['login-btn'])) {
 
     $username = trim(filter_var($_POST['username'], FILTER_SANITIZE_STRING));
     $password = $_POST['password'];
 
-    if(empty($username)){
+    if (empty($username)) {
         $_SESSION['errors']['username'] = 'Please provide a username';
     }
 
-    if(empty($password)){
+    if (empty($password)) {
         $_SESSION['errors']['password'] = 'You need to enter a password';
     }
 
-    if(isset($_SESSION['errors']) && count($_SESSION['errors']) > 0){
+    if (isset($_SESSION['errors']) && count($_SESSION['errors']) > 0) {
         $_SESSION['banner']['message'] = 'Check fields for errors';
         $_SESSION['banner']['class'] = 'error';
         redirect('/');
@@ -35,14 +35,16 @@ if(isset($_POST['login-btn'])){
 
     $credentials = $statement->fetch(PDO::FETCH_ASSOC);
 
-    if($credentials != true || password_verify($password, $credentials['password']) != true){
+    if ($credentials != true || password_verify($password, $credentials['password']) != true) {
         unset($_SESSION['errors']);
         $_SESSION['banner']['message'] = 'You provided wrong credentials';
         $_SESSION['banner']['class'] = 'error';
         redirect('/');
         exit();
-    }else{
-        if(password_verify($password, $credentials['password'])){
+
+    } else {
+
+        if (password_verify($password, $credentials['password'])) {
 
             $_SESSION['logedin'] = [
                 'user_id' => $credentials['user_id'],
@@ -54,10 +56,13 @@ if(isset($_POST['login-btn'])){
                 'profile_bio' => $credentials['profile_bio'],
                 'created_at' => $credentials['created_at']
             ];
-            redirect('../../account.php');
+            redirect('/account.php');
             exit();
         }
     }
-}else{
+
+} else {
+
     redirect('/');
+
 }

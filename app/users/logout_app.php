@@ -4,11 +4,16 @@ declare(strict_types=1);
 
 require __DIR__.'/../autoload.php';
 
-// Remove the user session variable and redirect the user back to the homepage.
-// unset($_SESSION['user']);
+if (isset($_GET['clicked'])) {
 
-session_unset();
-session_destroy();
+    session_unset();
+    session_destroy();
 
-redirect('/');
-exit();
+    redirect('/');
+    exit();
+
+} else {
+
+    redirect('/');
+
+}
