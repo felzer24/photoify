@@ -86,7 +86,8 @@ if(isset($_POST['signup-btn'])){
 
     $_SESSION['banner']['message'] = 'You are now registred';
     $_SESSION['banner']['class'] = 'success';
-    redirect('../../index.php');
+    redirect('/');
+    exit();
 } else {
     redirect('../../signup.php');
 }

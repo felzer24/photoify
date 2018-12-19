@@ -9,17 +9,19 @@
         </div>
     </div>
 
-    <form class="user-action-forms signin-form" action="app/users/login.php" method="post">
+    <form class="user-action-forms signin-form" action="app/users/signin_app.php" method="post">
 
         <div class="banner-messages <?= $_SESSION['banner']['class'] ?? '' ?>">
             <?= $_SESSION['banner']['message'] ?? '' ?>
         </div>
 
         <label for="username">Username</label>
-        <input id="username" type="text" name="username" placeholder="Username" required />
+        <input id="username" type="text" name="username"
+        placeholder="<?= $_SESSION['errors']['username'] ?? 'Username' ?>" required />
 
         <label for="password">Password</label>
-        <input id="password" type="password" name="password" autocomplete="off" placeholder="Password" required />
+        <input id="password" type="password" name="password" autocomplete="off"
+        placeholder="<?= $_SESSION['errors']['password'] ?? 'Password' ?>" required />
 
         <button type="submit" name="login-btn">Login</button>
 
