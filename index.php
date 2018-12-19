@@ -1,4 +1,13 @@
-<?php require __DIR__.'/views/header.php'; ?>
+<?php
+
+require __DIR__.'/views/header.php';
+
+if (isset($_SESSION['logedin'])) {
+    redirect('/account.php');
+    exit();
+}
+
+?>
 
 <main>
     <h3>Photoify Login</h3>

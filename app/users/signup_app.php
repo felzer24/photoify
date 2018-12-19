@@ -23,7 +23,9 @@ if (isset($_POST['signup-btn'])) {
     } else {
         $_SESSION['values']['username'] = $username;
     }
-    if (!empty($fullname)) {
+    if (empty($fullname)) {
+        $fullname = 'Unknown User';
+    } else {
         $_SESSION['values']['fullname'] = $fullname;
     }
     if (empty($npassword)) {
