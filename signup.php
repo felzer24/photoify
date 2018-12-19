@@ -5,17 +5,17 @@
 
     <form class="user-action-forms signup-form" action="app/users/signup_app.php" method="post">
 
-        <div class="banner-messages <?= $_SESSION['errors']['class'] ?? '' ?>">
-            <?= $_SESSION['errors']['banner'] ?? '' ?>
+        <div class="banner-messages <?= $_SESSION['banner']['class'] ?? '' ?>">
+            <?= $_SESSION['banner']['message'] ?? '' ?>
         </div>
 
         <label for="email">Email</label>
-        <input id="email" type="text" name="email" value="<?= $_SESSION['values']['email'] ?? '' ?>"
-        placeholder="<?= $_SESSION['errors']['email'] ?? 'Your Email' ?>" />
+        <input id="email" type="email" name="email" value="<?= $_SESSION['values']['email'] ?? '' ?>"
+        placeholder="<?= $_SESSION['errors']['email'] ?? 'Your Email' ?>" required />
 
         <label for="username">Username</label>
         <input id="username" type="text" name="username" value="<?= $_SESSION['values']['username'] ?? '' ?>"
-        placeholder="<?= $_SESSION['errors']['username'] ?? 'Username' ?>" />
+        placeholder="<?= $_SESSION['errors']['username'] ?? 'Username' ?>" required />
 
         <label for="fullname">Fullname</label>
         <input id="fullname" type="text" name="fullname" placeholder="Firstname Lastname"
@@ -23,11 +23,11 @@
 
         <label for="npassword">Create Password</label>
         <input id="npassword" type="password" name="npassword" autocomplete="off"
-        placeholder="<?= $_SESSION['errors']['npassword'] ?? 'New Password' ?>" />
+        placeholder="<?= $_SESSION['errors']['npassword'] ?? 'New Password' ?>" required />
 
         <label for="rpassword">Confirm Password</label>
         <input id="rpassword" type="password" name="rpassword" autocomplete="off"
-        placeholder="<?= $_SESSION['errors']['rpassword'] ?? 'Repeat Password' ?>" />
+        placeholder="<?= $_SESSION['errors']['rpassword'] ?? 'Repeat Password' ?>" required />
 
         <label for="timezone">Timezone</label>
         <select name="timezone" id="timezone" />

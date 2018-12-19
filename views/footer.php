@@ -2,7 +2,7 @@
     <?php
         unset($_SESSION['errors']);
         unset($_SESSION['values']);
-        unset($_SESSION['success']);
+        unset($_SESSION['banner']);
     ?>
 </body>
 </html>

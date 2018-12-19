@@ -11,8 +11,8 @@
 
     <form class="user-action-forms signin-form" action="app/users/login.php" method="post">
 
-        <div class="banner-messages <?= $_SESSION['success']['class'] ?? '' ?>">
-            <?= $_SESSION['success']['signup'] ?? '' ?>
+        <div class="banner-messages <?= $_SESSION['banner']['class'] ?? '' ?>">
+            <?= $_SESSION['banner']['message'] ?? '' ?>
         </div>
 
         <label for="username">Username</label>

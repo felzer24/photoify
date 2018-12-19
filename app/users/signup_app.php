@@ -34,8 +34,8 @@ if(isset($_POST['signup-btn'])){
     }
 
     if(isset($_SESSION['errors']) && count($_SESSION['errors']) > 0){
-        $_SESSION['errors']['banner'] = 'Check fields for errors';
-        $_SESSION['errors']['class'] = 'error';
+        $_SESSION['banner']['message'] = 'Check fields for errors';
+        $_SESSION['banner']['class'] = 'error';
         redirect('../../signup.php');
         exit();
     }
@@ -43,13 +43,13 @@ if(isset($_POST['signup-btn'])){
     if ($npassword != $rpassword) {
         $_SESSION['errors']['npassword'] = 'Password does not match';
         $_SESSION['errors']['rpassword'] = 'Password does not match';
-        $_SESSION['errors']['banner'] = 'Check fields for errors';
-        $_SESSION['errors']['class'] = 'error';
+        $_SESSION['banner']['message'] = 'Check fields for errors';
+        $_SESSION['banner']['class'] = 'error';
         redirect('../../signup.php');
         exit();
     }
 
-    $statement = $pdo->prepare('SELECT email, username FROM users WHERE email = :email AND username = :username;');
+    $statement = $pdo->prepare('SELECT email, username FROM users WHERE username = :username OR email = :email;');
 
     if (!$statement) {
         die(var_dump($pdo->errorInfo()));
@@ -64,8 +64,8 @@ if(isset($_POST['signup-btn'])){
     if($credentials['username'] === $username || $credentials['email'] === $email){
         unset($_SESSION['errors']);
         unset($_SESSION['values']);
-        $_SESSION['errors']['banner'] = 'Email or Password already registred';
-        $_SESSION['errors']['class'] = 'error';
+        $_SESSION['banner']['message'] = 'Email or Password already registred';
+        $_SESSION['banner']['class'] = 'error';
         redirect('../../signup.php');
     }
 
@@ -84,8 +84,8 @@ if(isset($_POST['signup-btn'])){
     $statement->bindParam(':password', $password, PDO::PARAM_STR);
     $statement->execute();
 
-    $_SESSION['success']['signup'] = 'You are now registred';
-    $_SESSION['success']['class'] = 'success';
+    $_SESSION['banner']['message'] = 'You are now registred';
+    $_SESSION['banner']['class'] = 'success';
     redirect('../../index.php');
 } else {
     redirect('../../signup.php');
