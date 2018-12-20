@@ -39,6 +39,42 @@ if (!isset($_SESSION['logedin'])) {
         Accepted formats: jpg/jpeg/gif/png Max filezise: 2MB</label>
         <input id="avatar" type="file" accept=".jpg, .jpeg, .gif, .png" name="profile_pic" />
 
+        <label for="biography">Update biography</label>
+        <textarea id="biography" name="biography" rows="3" cols="80"></textarea>
+
+        <label for="email">Update email</label>
+        <input id="email" type="email" name="email" value="fredrik@leemann.se" required/>
+
+        <label for="fullname">Update fullname</label>
+        <input id="fullname" type="text" name="fullname" value="Fredrik Leemann" />
+
+        <label for="opassword">Update password</label>
+        <input id="opassword" type="password" name="opassword" placeholder="Password" />
+        <input id="npassword" type="password" name="npassword" placeholder="New password" />
+        <input id="rpassword" type="password" name="rpassword" placeholder="Repeat password" />
+
+        <?php
+        $my_timezone = $_SESSION['logedin']['timezone'];
+
+        $timezones=[
+            str_replace('_','',"$my_timezone") => $my_timezone,
+            'Europe/Stockholm' => 'Europe/Stockholm',
+            'Europe/London' => 'Europe/London',
+            'America/New York' => 'America/New_York',
+            'Asia/Dubai' => 'Asia/Dubai'
+        ];
+
+        $timezones = array_unique($timezones);
+
+        ?>
+
+        <label for="timezone">Timezone</label>
+        <select name="timezone" id="timezone" />
+            <?php foreach ($timezones as $display => $value): ?>
+                <option value=<?= $value ?>><?= $display ?></option>
+            <?php endforeach; ?>
+        </select>
+
         <button type="submit" name="update_profile-btn">Save Changes</button>
     </form>
 

@@ -1,0 +1,40 @@
+body{
+  background-color: #F8F9FA;
+}
+
+.my-orange-color{
+  background-color: #E34D3A !important;
+}
+
+li.list-group-item:first-child {
+  border-top-right-radius: 0px !important;
+  border-top-left-radius: 0px !important;
+}
+
+textarea.form-control{
+  resize: none;
+  height: 62px;
+  width: 100%;
+}
+
+section.account-info{
+  color: #686868;
+}
+
+section.position-absolute{
+  z-index: 50;
+  top: 0;
+}
+
+section.display-none {
+  display: none;
+}
+
+section.overlay-display {
+  display: block;
+}
+
+nav.main{
+  border-bottom: 1px solid black;
+  box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
+}
