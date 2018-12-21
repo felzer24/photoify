@@ -40,7 +40,7 @@ section.position-absolute{
   top: 0;
 }
 
-section.display-none {
+section.display-none, div.display-none {
   display: none;
 }
 
@@ -51,4 +51,42 @@ section.overlay-display {
 nav.main{
   border-bottom: 1px solid black;
   box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
+}
+
+/* Mobile menu */
+
+.mobile-menu{
+  width: 60px;
+  height: 40px;
+  display: flex;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  /* border: 1px solid black; */
+}
+
+.hamburger-menu{
+  height: 3px;
+  width: 30px;
+  border-radius: 2px;
+  background-color: #000;
+}
+
+.hamburger-menu::before, .hamburger-menu::after{
+  content: " ";
+  display: block;
+  height: inherit;
+  width: inherit;
+  background-color: inherit;
+  border-radius: inherit;
+  position: absolute;
+}
+
+.hamburger-menu::before{
+  margin-top: -8px;
+}
+
+.hamburger-menu::after {
+  margin-top: 8px;
 }
