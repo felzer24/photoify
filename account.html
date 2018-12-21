@@ -25,6 +25,7 @@
     <nav class="navbar main navbar-light bg-light my-orange-color">
       <div class="container">
         <a class="navbar-brand font-weight-bold" href="/">Photoify</a>
+        <i class="navbar font-weight-bold fa fa-sign-out fa-1x" aria-hidden="true"><a class="pl-2 text-dark" href="#">Logout</a></i>
       </div>
     </nav>
   </header>
@@ -70,7 +71,7 @@
                         <label for="profile_bio" class="float-left"></label>
                         <textarea id="profile_bio" class="form-control" name="profile_bio" rows="2"></textarea>
                       </div>
-                      <button type="submit" class="btn btn-primary my-2">Save Changes</button>
+                      <button type="submit" class="btn btn-success my-2">Save Changes</button>
                       <button type="button" class="btn btn-dark my-2" id="edit-close-overlay-btn">Close Window</button>
                     </form>
                   </div>
@@ -85,8 +86,9 @@
           <!-- Start section 2 in column 1 -->
           <section class="account-info" style="height: 260px;">
             <div class="container m-0 p-0 bg-white border-right border-left h-100 d-block text-left p-3">
-              <button id="edit-account" type="button" class="btn btn-info my-2">Edit Account</button>
-              <button id="delete-account" type="button" class="btn btn-danger my-2">Delete Account</button>
+              <button id="edit-account" type="button" class="btn btn-info mt-2 mb-3"><i class="fa fa-pencil-square-o pr-1" aria-hidden="true"></i>Edit Account</button>
+              <button id="delete-account" type="button" class="btn btn-danger mt-2 mb-3"><i class="fa fa-trash-o pr-1" aria-hidden="true"></i>Delete Account</button>
+              <br /><span class="lead">Welcome Fredrik Leemann</span>
               <hr />
               <p class="lead mb-1">Biography:</p>
               <small>Hej på dig!</small>
@@ -115,7 +117,7 @@
             <!-- Start container for column 2 section 1 -->
             <div class="container m-0 p-0 border">
               <!-- Start jumbotron for form -->
-              <div class="jumbotron jumbotron-fluid py-3 m-0">
+              <div class="jumbotron jumbotron-fluid py-3 m-0 my-post-module">
                 <!-- Start container for form -->
                 <div class="container">
                   <h4>Create a new post</h4>
@@ -129,7 +131,7 @@
                       <label for="postdesc" class="float-left">Add description</label>
                       <textarea class="form-control" id="postdesc" rows="2"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Post to timeline</button>
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-file-o pr-1" aria-hidden="true"></i>Post to timeline</button>
                   </form>
                 </div><!-- End container for form -->
               </div><!-- End jumbotron for form -->
