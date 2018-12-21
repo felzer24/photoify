@@ -67,7 +67,7 @@
                       </div>
                     </div><!-- Start container for profile image -->
                     <h4>Edit Account</h4>
-                    <form>
+                    <form action="app/users/something.php" method="post">
                       <div class="form-group">
                         <label for="profile_pic" class="float-left">Upload Avatar</label>
                         <input id="profile_pic" class="form-control-file" name="profile_pic" type="file" accept=".jpg, .jpeg, .gif, .png" />
@@ -161,7 +161,7 @@
                 <!-- Start container for form -->
                 <div class="container">
                   <h4>Create a new post</h4>
-                  <form>
+                  <form action="app/users/something.php" method="post">
                     <div class="form-group">
                       <label for="postfile" class="float-left">Upload image</label>
                       <input id="postfile" class="form-control-file" name="postfile" type="file" />
@@ -185,15 +185,16 @@
                 <img src="assets/images/profiles/profile_129.gif" class="img-thumbnail" alt="Profile picture" style="height: auto; max-width: 40px; display: block;">
                 <small>Posted: yyyy-mm-dd hh-mm-ss</small>
               </div>
+
               <div class="card-body p-0">
                 <img class="card-img-top img-fluid" src="assets/images/profile_1-post_1.jpg" alt="Card image cap">
                 <p class="card-text text-left px-2 py-1">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
-              <div class="card-footer">
 
-              <button type="button" data="like-btn" class="pw-2 border-0 bg-light btn">
-                <i class="fa fa-heart" aria-hidden="true"><small class="pl-1">Like</small></i>
-              </button>
+              <div class="card-footer d-flex justify-content-between align-items-center px-2">
+                <button type="button" data="like-btn" class="pw-2 border-0 bg-light btn">
+                  <i class="fa fa-heart" aria-hidden="true"><small class="pl-1">Like</small></i>
+                </button>
 
                 <button type="button" data="like-btn" class="pw-2 border-0 bg-light btn">
                   <i class="fa fa-thumbs-up" aria-hidden="true"><small class="pl-1">Like</small></i>
@@ -202,11 +203,14 @@
                 <button type="button" data="dislike-btn" class="pw-2 border-0 bg-light btn">
                   <i class="fa fa-thumbs-down" aria-hidden="true"><small class="pl-1">Dislike</small></i>
                 </button>
+
+                <div>
+                  <button id="edit-post" type="button" class="btn btn-info btn-sm"><i class="fa fa-pencil-square-o pr-1" aria-hidden="true"></i>Edit</button>
+                  <button id="delete-post" type="button" class="btn btn-danger btn-sm disabled"><i class="fa fa-trash-o pr-1" aria-hidden="true"></i>Delete</button>
+                </div>
               </div>
             </div>
           </article>
-
-
         </div><!-- End column 2 -->
       </div><!-- End main row -->
     </div><!-- End main container -->
