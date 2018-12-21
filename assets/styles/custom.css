@@ -30,6 +30,11 @@ textarea.form-control{
   overflow: hidden;
 }
 
+textarea.form-control.post-desc:focus{
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
 section.account-info{
   color: #686868;
 }
