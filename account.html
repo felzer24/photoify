@@ -25,7 +25,7 @@
     <nav class="navbar main navbar-light bg-light my-orange-color">
       <div class="container">
         <a class="navbar-brand font-weight-bold" href="/">Photoify</a>
-        <i class="navbar font-weight-bold fa fa-sign-out fa-1x" aria-hidden="true"><a class="pl-2 text-dark" href="#">Logout</a></i>
+        <i class="navbar font-weight-bold fa fa-sign-out" aria-hidden="true"><a class="pl-2 text-dark" href="#">Logout</a></i>
       </div>
     </nav>
   </header>
@@ -34,10 +34,15 @@
     <!-- Start main container -->
     <div class="container">
       <!-- Start main row -->
-      <div class="row text-center my-3">
+      <div class="row text-center my-4">
 
         <!-- Start column 1 -->
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mb-3">
+
+          <div class="my-radius-none alert alert-secondary m-0 d-flex align-items-center justify-content-center">
+            <strong>Messages will appear here</strong>
+          </div>
+
           <!-- Start section 1 in column 1 -->
           <section class="position-relative">
             <div class="container m-0 py-4 my-orange-color">
@@ -48,47 +53,80 @@
 
             <!-- Add class to show: overlay-display -->
             <!-- Start section 1 for overlay 1 in column 1 -->
-            <section id="edit-toggle-overlay" class="position-absolute display-none">
+            <section id="edit-toggle-overlay" class="position-absolute mb-4 display-none">
               <!-- Start container for column 2 section 1 -->
               <div class="container m-0 p-0 border">
                 <!-- Start jumbotron for form -->
                 <div class="jumbotron jumbotron-fluid py-3 m-0">
                   <!-- Start container for form -->
                   <div class="container">
+                    <!-- Start container for profile image -->
                     <div class="container m-0 py-4 my-orange-color mb-3 position-relative">
                       <div class="col-4 mx-auto">
                         <img src="assets/images/profiles/profile_129.gif" class="img-thumbnail img-fluid" alt="Profile picture">
                       </div>
-                    </div>
+                    </div><!-- Start container for profile image -->
                     <h4>Edit Account</h4>
                     <form>
                       <div class="form-group">
                         <label for="profile_pic" class="float-left">Upload Avatar</label>
-                        <input id="profile_pic" class="form-control-file" name="profile_pic" type="file" />
+                        <input id="profile_pic" class="form-control-file" name="profile_pic" type="file" accept=".jpg, .jpeg, .gif, .png" />
                         <small class="form-text text-muted text-left">Accepted filetypes: .jpg .jpeg .png .gif Maxfilesize: 2MB</small>
                       </div>
+
                       <div class="form-group">
-                        <label for="profile_bio" class="float-left"></label>
-                        <textarea id="profile_bio" class="form-control" name="profile_bio" rows="2"></textarea>
+                        <label for="profile_bio" class="float-left">Update biography</label>
+                        <textarea id="profile_bio" class="form-control" name="profile_bio" maxlength="101"></textarea>
                       </div>
-                      <button type="submit" class="btn btn-success my-2">Save Changes</button>
-                      <button type="button" class="btn btn-dark my-2" id="edit-close-overlay-btn">Close Window</button>
+
+                      <div class="form-group">
+                        <label for="email" class="float-left">Update email</label>
+                        <input id="email" class="form-control" name="email" type="email" value="fredrik@leemann.se" required />
+                      </div>
+
+                      <div class="form-group">
+                        <label for="fullname" class="float-left">Update fullname</label>
+                        <input id="fullname" class="form-control" name="fullname" type="text" value="Fredrik Leemann" />
+                      </div>
+
+                      <div class="form-group">
+                        <label for="timezone" class="float-left">Timezone</label>
+                        <select id="timezone" class="form-control" name="timezone">
+                          <option value="Europe/Stockholm" selected>Europe/Stockholm</option>
+                          <option value="Europe/London">Europe/London</option>
+                          <option value="America/New_York">America/NewYork</option>
+                          <option value="Asia/Dubai">Asia/Dubai</option>
+                        </select>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="opassword" class="float-left">Update password</label>
+                        <input id="opassword" class="form-control" name="cpassword" type="password" placeholder="Current password" />
+                      </div>
+                      <div class="form-group">
+                        <input id="npassword" class="form-control" name="npassword" type="password" placeholder="Set a new password" />
+                      </div>
+                      <div class="form-group">
+                        <input id="rpassword" class="form-control" name="rpassword" type="password" placeholder="Repeat new password" />
+                      </div>
+
+                      <button type="submit" class="btn btn-success my-2"><i class="fa fa-floppy-o pr-1" aria-hidden="true"></i>Save Changes</button>
+                      <button type="button" class="btn btn-dark my-2" id="edit-close-overlay-btn"><i class="fa fa-times-circle-o pr-1" aria-hidden="true"></i>Close Window</button>
                     </form>
                   </div>
                 </div>
               </div>
+              <!-- End section 1 for overlay 1 in column 1 -->
             </section>
-            <!-- End section 1 for overlay 1 in column 1 -->
-
+            <!-- End section 1 in column 1 -->
           </section>
-          <!-- End section 1 in column 1 -->
 
           <!-- Start section 2 in column 1 -->
           <section class="account-info" style="height: 260px;">
             <div class="container m-0 p-0 bg-white border-right border-left h-100 d-block text-left p-3">
               <button id="edit-account" type="button" class="btn btn-info mt-2 mb-3"><i class="fa fa-pencil-square-o pr-1" aria-hidden="true"></i>Edit Account</button>
               <button id="delete-account" type="button" class="btn btn-danger mt-2 mb-3"><i class="fa fa-trash-o pr-1" aria-hidden="true"></i>Delete Account</button>
-              <br /><span class="lead">Welcome Fredrik Leemann</span>
+              <br /><dt>Welcome Fredrik Leemann</dt>
               <hr />
               <p class="lead mb-1">Biography:</p>
               <small>Hej på dig!</small>
@@ -111,35 +149,65 @@
         </div><!-- End column 1 -->
 
         <!-- Start column 2 -->
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+        <!-- Toggle class: d-none when overlay is open -->
+        <div id="second-column" class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
           <!-- Start section 1 for column 2 -->
-          <section class="sticky-top">
+          <!-- <section class="sticky-top"> -->
+          <section>
             <!-- Start container for column 2 section 1 -->
-            <div class="container m-0 p-0 border">
+            <div class="my-post-module container m-0 p-0 border-right border-left border-top">
               <!-- Start jumbotron for form -->
-              <div class="jumbotron jumbotron-fluid py-3 m-0 my-post-module">
+              <div class="jumbotron jumbotron-fluid py-3 m-0">
                 <!-- Start container for form -->
                 <div class="container">
                   <h4>Create a new post</h4>
                   <form>
                     <div class="form-group">
                       <label for="postfile" class="float-left">Upload image</label>
-                      <input type="file" class="form-control-file" id="postfile" />
+                      <input id="postfile" class="form-control-file" name="postfile" type="file" />
                       <small class="form-text text-muted text-left">Accepted filetypes: .jpg .jpeg .png .gif Maxfilesize: 2MB</small>
                     </div>
                     <div class="form-group">
                       <label for="postdesc" class="float-left">Add description</label>
-                      <textarea class="form-control" id="postdesc" rows="2"></textarea>
+                      <textarea id="postdesc" class="form-control" name="postdesc" maxlength="101"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-file-o pr-1" aria-hidden="true"></i>Post to timeline</button>
+                    <button class="btn btn-primary" type="submit"><i class="fa fa-arrow-circle-o-down pr-1" aria-hidden="true"></i>Post to timeline</button>
                   </form>
                 </div><!-- End container for form -->
               </div><!-- End jumbotron for form -->
             </div><!-- End container for column 2 section 1 -->
           </section><!-- End section 1 for column 2 -->
 
-        </div><!-- End column 2 -->
 
+          <article class="mt-3">
+            <div class="card" style="width: 100%;">
+              <img class="card-img-top img-fluid" src="assets/images/profile_1-post_1.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="mt-3">
+            <div class="card" style="width: 100%;">
+              <div class="card-header d-flex justify-content-between align-items-center px-2" style="height: 50px;">
+                <img src="assets/images/profiles/profile_129.gif" class="img-thumbnail" alt="Profile picture" style="height: auto; max-width: 40px; display: block;">
+                <small>Posted: yyyy-mm-dd hh-mm-ss</small>
+              </div>
+              <div class="card-body p-0">
+                <img class="card-img-top img-fluid" src="assets/images/profile_1-post_1.jpg" alt="Card image cap">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+              <div class="card-footer">Footer</div>
+            </div>
+          </article>
+
+
+        </div><!-- End column 2 -->
       </div><!-- End main row -->
     </div><!-- End main container -->
   </main>
