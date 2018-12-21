@@ -27,6 +27,7 @@ textarea.form-control{
   resize: none;
   height: 62px;
   width: 100%;
+  overflow: hidden;
 }
 
 section.account-info{
