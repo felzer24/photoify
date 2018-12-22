@@ -26,11 +26,15 @@
 
       <div class="container">
         <a class="navbar-brand font-weight-bold" href="/">Photoify</a>
-        <i class="navbar font-weight-bold fa fa-sign-out" aria-hidden="true"><a class="pl-2 text-dark" href="#">Logout</a></i>
-      </div>
 
-      <div class="mobile-menu">
-        <div class="hamburger-menu"></div>
+        <i class="navbar font-weight-bold d-none d-lg-block fa fa-sign-out" aria-hidden="true">
+          <a class="pl-2 text-dark" href="#">Logout</a>
+        </i>
+
+        <div class="mobile-menu d-flex d-lg-none">
+          <div class="hamburger-menu"></div>
+        </div>
+
       </div>
 
     </nav>
@@ -44,7 +48,7 @@
 
         <!-- Start column 1 -->
         <!-- Margin bottom 0 (mb-0) on mobile -->
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mb-3">
+        <div id="first-column" class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mb-0 mb-lg-3">
 
           <div class="my-radius-none alert alert-secondary m-0 d-flex align-items-center justify-content-center">
             <strong>Messages will appear here</strong>
@@ -52,7 +56,7 @@
 
           <!-- Start section 1 user-info wrapper -->
           <!-- Toggle class="display-none" on mobile -->
-          <div class="">
+          <div id="wrapper-first-column" class="d-none d-lg-block">
             <!-- Start section 1 in column 1 -->
             <section class="position-relative">
               <div class="container m-0 py-4 my-orange-color">
