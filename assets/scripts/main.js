@@ -15,7 +15,6 @@ const editToggleOverlay = document.getElementById('edit-toggle-overlay');
 // Buttons in Manage Account Overlay
 const editCloseOverlayBtn = document.getElementById('edit-close-overlay-btn');
 const editAccountOverlayBtn = document.getElementById('edit-account');
-const deleteAccountOverlayBtn = document.getElementById('delete-account');
 
 // Prevent Enter-key in textareas
 const textAreasPrevent = document.querySelectorAll('textarea');
@@ -31,11 +30,13 @@ mobileMenu.addEventListener('click', () => {
 
 editAccountOverlayBtn.addEventListener('click', () => {
     editToggleOverlay.classList.add('overlay-display');
+    mobileMenu.style.pointerEvents = "none";
     secondColumn.classList.add('d-none');
 });
 
 editCloseOverlayBtn.addEventListener('click', () => {
     editToggleOverlay.classList.remove('overlay-display');
+    mobileMenu.removeAttribute('style');
     secondColumn.classList.remove('d-none');
     window.scrollTo(0, 0);
 });

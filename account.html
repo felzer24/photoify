@@ -21,9 +21,9 @@
 </head>
 
 <body>
-  <header>
-    <nav class="navbar main navbar-light bg-light my-orange-color">
 
+  <header class="position-relative">
+    <nav class="navbar main navbar-light bg-light my-orange-color">
       <div class="container">
         <a class="navbar-brand font-weight-bold" href="/">Photoify</a>
 
@@ -34,9 +34,7 @@
         <div class="mobile-menu d-flex d-lg-none">
           <div class="hamburger-menu"></div>
         </div>
-
       </div>
-
     </nav>
   </header>
 
@@ -130,6 +128,15 @@
                     </div>
                   </div>
                 </div>
+
+                <div class="jumbotron bg-warning warning-delete-account m-0">
+                  <h1 class="display-5 pb-4">DangerZone</h1>
+                  <p class="lead">By clicking the button below your account will get deleted together with all content such as posts, files and personal information</p>
+                  <hr class="my-4" />
+
+                  <button type="submit" class="btn btn-danger mt-2 mb-3"><i class="fa fa-trash-o pr-1" aria-hidden="true"></i>Delete Account</button>
+                </div>
+
                 <!-- End section 1 for overlay 1 in column 1 -->
               </section>
               <!-- End section 1 in column 1 -->
@@ -138,9 +145,16 @@
             <!-- Start section 2 in column 1 -->
             <section class="account-info" style="height: 260px;">
               <div class="container m-0 p-0 bg-white border-right border-left h-100 d-block text-left p-3">
-                <button id="edit-account" type="button" class="btn btn-info mt-2 mb-3"><i class="fa fa-pencil-square-o pr-1" aria-hidden="true"></i>Edit Account</button>
-                <button id="delete-account" type="button" class="btn btn-danger mt-2 mb-3"><i class="fa fa-trash-o pr-1" aria-hidden="true"></i>Delete Account</button>
-                <br /><dt>Welcome Fredrik Leemann</dt>
+
+                <button id="edit-account" type="button" class="edit-account-btn btn btn-info mt-2 mb-3">
+                  <i class="fa fa-user-circle-o pr-1" aria-hidden="true"></i>Account</button>
+
+                <i class="font-weight-bold bg-light p-1 border d-inline-block d-lg-none fa fa-sign-out float-right" aria-hidden="true">
+                  <a class="text-dark" href="#">Logout</a>
+                </i>
+
+                <br />
+                <dt>Welcome Fredrik Leemann</dt>
                 <hr />
                 <p class="lead mb-1">Biography:</p>
                 <small>Hej på dig!</small>
@@ -202,29 +216,32 @@
               </div>
 
               <div class="card-body p-0">
-                <img class="card-img-top img-fluid" src="assets/images/profile_1-post_1.jpg" alt="Card image cap">
-                <p class="card-text text-left bg-light p-2 m-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <div class="form-group m-0">
+                <img class="card-img-top img-fluid" src="assets/images/profile_1-post_1.jpg" alt="Card image cap" />
+                  <p class="card-text text-left bg-light py-2 px-4 m-0">
+                    <small>Some quick example text to build on the card title and make up the bulk of the card's content.</small>
+                  </p>
+                <!-- <div class="form-group m-0">
                   <textarea class="form-control post-desc" readonly name="postdesc" style="border-radius: 0px; border: 0;" maxlength="101">Some quick example text to build on the card title and make up the bulk of the card's content.</textarea>
-                </div>
+                </div> -->
               </div>
 
               <div class="card-footer d-flex justify-content-between align-items-center px-2">
+
                 <button type="button" id="like-btn-1" class="p-1 border-0 bg-light btn">
                   <i class="fa fa-heart" aria-hidden="true"><small class="pl-1">Like</small></i>
                 </button>
 
-                <button type="button" id="like-btn-2" class="p-1 border-0 bg-light btn">
+                <!-- <button type="button" id="like-btn-2" class="p-1 border-0 bg-light btn">
                   <i class="fa fa-thumbs-up" aria-hidden="true"><small class="pl-1">Like</small></i>
                 </button>
 
                 <button type="button" id="dislike-btn" class="p-1 border-0 bg-light btn">
                   <i class="fa fa-thumbs-down" aria-hidden="true"><small class="pl-1">Dislike</small></i>
-                </button>
+                </button> -->
 
                 <div>
-                  <button id="edit-post" type="button" class="btn btn-info btn-sm"><i class="fa fa-pencil-square-o pr-1" aria-hidden="true"></i>Edit</button>
-                  <button id="delete-post" type="button" class="btn btn-danger btn-sm disabled"><i class="fa fa-trash-o pr-1" aria-hidden="true"></i>Delete</button>
+                  <button id="edit-post" type="button" class="btn-small btn-info"><i class="fa fa-pencil-square-o pr-1" aria-hidden="true"></i>Edit</button>
+                  <button id="delete-post" type="button" class="btn-small btn-danger disabled"><i class="fa fa-trash-o pr-1" aria-hidden="true"></i>Delete</button>
                 </div>
               </div>
             </div>
