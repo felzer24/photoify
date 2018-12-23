@@ -207,7 +207,6 @@
             </div><!-- End container for column 2 section 1 -->
           </section><!-- End section 1 for column 2 -->
 
-
           <article class="mt-3">
             <div class="card" style="width: 100%;">
               <div class="card-header d-flex justify-content-between align-items-center px-2" style="height: 50px;">
@@ -256,5 +255,4 @@
   </footer>
   <script src="/assets/scripts/main.js"></script>
 </body>
-
 </html>

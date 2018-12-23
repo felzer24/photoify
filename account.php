@@ -1,84 +1,207 @@
-<?php
+<?php require __DIR__.'/views/header.php'; ?>
 
-require __DIR__.'/views/header.php';
+    <main>
+        <!-- Start main container -->
+        <div class="container">
+            <!-- Start main row -->
+            <div class="row text-center my-4">
 
-if (!isset($_SESSION['logedin'])) {
-    redirect('/');
-    exit();
-}
+                <!-- Start column 1 -->
+                <!-- Margin bottom 0 (mb-0) on mobile -->
+                <div id="first-column" class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mb-0 mb-lg-3">
 
-?>
+                    <div class="my-radius-none alert alert-secondary m-0 d-flex align-items-center justify-content-center">
+                        <small><strong>Messages will appear here</strong></small>
+                    </div>
 
-<main>
-    <h3>Welcome <?= $_SESSION['logedin']['fullname'] ?></h3>
+                    <!-- Start user-info column wrapper -->
+                    <div id="wrapper-first-column" class="d-none d-lg-block">
 
-    <?php var_dump($_SESSION['logedin']); ?>
+                        <!-- Start section 1 in column 1 -->
+                        <section class="position-relative">
+                            <div class="container m-0 py-4 my-orange-color">
+                                <div class="col-4 mx-auto">
+                                    <img src="assets/images/profiles/<?= $profile_pic ?>" class="img-thumbnail img-fluid" alt="Profile picture for <?= $username ?>" />
+                                </div>
+                            </div>
+                            <!-- Start section 1 for overlay in column 1 -->
+                            <section id="edit-toggle-overlay" class="position-absolute mb-4 display-none">
+                                <!-- Start container for column 1 overlay  -->
+                                <div class="container m-0 p-0 border">
+                                    <!-- Start jumbotron div for form -->
+                                    <div class="jumbotron jumbotron-fluid py-3 m-0">
+                                        <!-- Start container for form -->
+                                        <div class="container">
+                                            <!-- Start container for profile image -->
+                                            <div class="container m-0 py-4 my-orange-color mb-3 position-relative">
+                                                <div class="col-4 mx-auto">
+                                                    <img src="assets/images/profiles/<?= $profile_pic ?>" class="img-thumbnail img-fluid" alt="Profile picture for <?= $username ?>" />
+                                                </div>
+                                            </div>
+                                            <!-- End container for profile image -->
+                                            <h4>Edit Account</h4>
+                                            <form action="app/users/update.app_users.php" method="post" enctype="multipart/form-data">
+                                                <div class="form-group">
+                                                    <small class="filename-profile form-text text-muted text-left">Filename: <i>....</i></small>
+                                                    <label for="profile_pic" class="profile-input-label bg-secondary text-light float-left">Click to upload your Avatar</label>
+                                                    <input id="profile_pic" class="profile-input-file form-control-file" name="profile_pic" type="file" accept=".jpg, .jpeg, .gif, .png" />
+                                                    <small class="form-text text-muted text-left">Accepted filetypes: .jpg .jpeg .png .gif Maxfilesize: 2MB</small>
+                                                </div>
 
-    <h3>User Account Created:
+                                                <div class="form-group">
+                                                    <label for="profile_bio" class="float-left">Update biography</label>
+                                                    <textarea id="profile_bio" class="form-control" name="profile_bio" maxlength="100"><?= $profile_bio ?></textarea>
+                                                </div>
 
-        <?php
+                                                <div class="form-group">
+                                                    <label for="email" class="float-left">Update email</label>
+                                                    <input id="email" class="form-control" name="email" type="email" value="<?= $email ?>" required />
+                                                </div>
 
-        $datetime = date_create($_SESSION['logedin']['created_at'], timezone_open('UTC'));
-        date_timezone_set($datetime, timezone_open($_SESSION['logedin']['timezone']));
-        echo date_format($datetime, 'Y-m-d H:i:s') . "\n";
-        $tz = date_timezone_get($datetime);
-        echo 'Timezone: '.timezone_name_get($tz);
+                                                <div class="form-group">
+                                                    <label for="fullname" class="float-left">Update fullname</label>
+                                                    <input id="fullname" class="form-control" name="fullname" type="text" value="<?= $fullname ?>" />
+                                                </div>
 
-        ?>
-    </h3>
+                                                <div class="form-group">
+                                                    <label for="timezone" class="float-left">Timezone</label>
+                                                    <select class="form-control" id="timezone" name="timezone" />
+                                                        <?php foreach ($timezones as $display => $value): ?>
+                                                            <option value=<?= $value ?>><?= $display ?></option>
+                                                        <?php endforeach; ?>
+                                                    </select>
+                                                </div>
 
-    <div class="banner-messages <?= $_SESSION['banner']['class'] ?? '' ?>">
-        <?= $_SESSION['banner']['message'] ?? '' ?>
-    </div>
+                                                <div class="form-group">
+                                                    <label for="opassword" class="float-left">Update password</label>
+                                                    <input id="opassword" class="form-control" name="cpassword" type="password" placeholder="Current password" required />
+                                                </div>
+                                                <div class="form-group">
+                                                    <input id="npassword" class="form-control" name="npassword" type="password" placeholder="Set a new password" required />
+                                                </div>
+                                                <div class="form-group">
+                                                    <input id="rpassword" class="form-control" name="rpassword" type="password" placeholder="Repeat new password" required />
+                                                </div>
 
-    <form action="app/users/update.app_users.php" method="post" enctype="multipart/form-data">
+                                                <button type="submit" class="btn btn-success my-2" name="update_profile-btn"><i class="fa fa-floppy-o pr-1" aria-hidden="true"></i>Save Changes</button>
+                                                <button type="button" class="btn btn-dark my-2" id="edit-close-overlay-btn"><i class="fa fa-times-circle-o pr-1" aria-hidden="true"></i>Close Window</button>
+                                            </form>
+                                        </div><!-- End container for form -->
+                                    </div><!-- End jumbotron div for form -->
+                                </div><!-- End container for column 1 overlay  -->
 
-        <img src="assets/images/profiles/<?= $_SESSION['logedin']['profile_pic'] ?>" alt="Profile picture for <?= $_SESSION['logedin']['username'] ?>" />
+                                <div class="jumbotron bg-warning warning-delete-account m-0">
+                                    <h1 class="display-5 pb-4">DangerZone</h1>
+                                    <p class="lead">By clicking the button below your account will get deleted together with all content such as posts, files and personal information</p>
+                                    <hr class="my-4" />
+                                    <button type="submit" class="btn btn-danger mt-2 mb-3"><i class="fa fa-trash-o pr-1" aria-hidden="true"></i>Delete Account</button>
+                                </div>
 
-        <label for="avatar">Upload your avatar here...<br />
-        Accepted formats: jpg/jpeg/gif/png Max filezise: 2MB</label>
-        <input id="avatar" type="file" accept=".jpg, .jpeg, .gif, .png" name="profile_pic" />
+                            </section>
+                            <!-- End section 1 for overlay 1 in column 1 -->
+                        </section>
+                        <!-- End section 1 in column 1 -->
 
-        <label for="biography">Update biography</label>
-        <textarea id="biography" name="biography" rows="3" cols="80"></textarea>
+                        <!-- Start section 2 in column 1 -->
+                        <section class="account-info" style="height: 225px;">
+                            <div class="container m-0 p-0 bg-white border-right border-left h-100 d-block text-left p-3">
+                                <button id="edit-account" type="button" class="edit-account-btn btn btn-info mt-2 mb-3">
+                                <i class="fa fa-user-circle-o pr-1" aria-hidden="true"></i>Account</button>
+                                <i class="font-weight-bold bg-light p-1 border d-inline-block d-lg-none fa fa-sign-out float-right" aria-hidden="true">
+                                    <a class="text-dark" href="app/users/logout.app_users.php?clicked=true" title="Logout">Logout</a>
+                                </i>
 
-        <label for="email">Update email</label>
-        <input id="email" type="email" name="email" value="fredrik@leemann.se" required/>
+                                <br />
+                                <dt>Welcome <?= $fullname ?></dt>
+                                <hr />
+                                <p class="lead mb-1">Biography:</p>
+                                <small class="d-block" style="max-width: 380px"><?= $profile_bio ?></small>
+                            </div>
+                        </section>
+                        <!-- End section 2 for column 1 -->
+                            <section class="account-info">
+                                <div class="container m-0 p-0">
+                                    <ul class="list-group">
+                                        <li class="list-group-item text-left">Username: <?= $username ?></li>
+                                        <li class="list-group-item text-left">TimeZone: <?= timezone_name_get($my_timezone) ?></li>
+                                        <li class="list-group-item text-left">Created: <?= date_format($datetime, 'Y-m-d H:i:s') ?></li>
+                                    </ul>
+                                </div>
+                            </section>
+                        </div>
+                    </div><!-- End user-info column wrapper -->
 
-        <label for="fullname">Update fullname</label>
-        <input id="fullname" type="text" name="fullname" value="Fredrik Leemann" />
+                    <!-- Start column 2 -->
+                    <div id="second-column" class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                        <!-- Start section 1 for column 2 -->
+                        <section>
+                            <!-- Start container for column 2 section 1 -->
+                            <div class="my-post-module container m-0 p-0 border-right border-left border-top">
+                                <!-- Start jumbotron for form -->
+                                <div class="jumbotron jumbotron-fluid py-3 m-0">
+                                    <!-- Start container for form -->
+                                    <div class="container">
+                                        <h4>Create a new post</h4>
+                                        <form action="app/users/something.php" method="post" enctype="multipart/form-data">
+                                            <div class="form-group">
+                                                <label for="postfile" class="float-left">Upload image</label>
+                                                <input id="postfile" class="form-control-file" name="postfile" type="file" />
+                                                <small class="form-text text-muted text-left">Accepted filetypes: .jpg .jpeg .png .gif Maxfilesize: 2MB</small>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="postdesc" class="float-left">Add description</label>
+                                                <textarea id="postdesc" class="form-control" name="postdesc" maxlength="100"></textarea>
+                                            </div>
+                                            <button class="btn btn-primary btn-block" type="submit" name="timeline_post-btn"><i class="fa fa-arrow-circle-o-down pr-1" aria-hidden="true"></i>Post to timeline</button>
+                                        </form>
+                                    </div><!-- End container for form -->
+                                </div><!-- End jumbotron for form -->
+                            </div><!-- End container for column 2 section 1 -->
+                        </section><!-- End section 1 for column 2 -->
 
-        <label for="opassword">Update password</label>
-        <input id="opassword" type="password" name="opassword" placeholder="Password" />
-        <input id="npassword" type="password" name="npassword" placeholder="New password" />
-        <input id="rpassword" type="password" name="rpassword" placeholder="Repeat password" />
+                        <article class="mt-3">
+                            <div class="card" style="width: 100%;">
 
-        <?php
-        $my_timezone = $_SESSION['logedin']['timezone'];
+                                <div class="card-header d-flex justify-content-between align-items-center px-2" style="height: 50px;">
+                                    <img src="assets/images/profiles/<?= $profile_pic ?>" alt="Profile picture for <?= $username ?>" class="img-thumbnail" style="height: auto; max-width: 40px; display: block;" />
+                                    <small>Posted: yyyy-mm-dd hh-mm-ss</small>
+                                </div>
 
-        $timezones=[
-            str_replace('_','',"$my_timezone") => $my_timezone,
-            'Europe/Stockholm' => 'Europe/Stockholm',
-            'Europe/London' => 'Europe/London',
-            'America/New York' => 'America/New_York',
-            'Asia/Dubai' => 'Asia/Dubai'
-        ];
+                                <div class="card-body p-0">
+                                    <img class="card-img-top img-fluid" src="assets/images/profile_1-post_1.jpg" alt="Card image cap" />
+                                    <p class="card-text text-left bg-light py-2 px-4 m-0">
+                                        <small>Some quick example text to build on the card title and make up the bulk of the card's content.</small>
+                                    </p>
+                                    <!-- <div class="form-group m-0">
+                                    <textarea class="form-control post-desc" readonly name="postdesc" style="border-radius: 0px; border: 0;" maxlength="100">Some quick example text to build on the card title and make up the bulk of the card's content.</textarea>
+                                    </div> -->
+                                </div>
 
-        $timezones = array_unique($timezones);
+                                <div class="card-footer d-flex justify-content-between align-items-center px-2">
 
-        ?>
+                                    <button type="button" id="like-btn-1" class="p-1 border-0 bg-light btn">
+                                        <i class="fa fa-heart" aria-hidden="true"><small class="pl-1">Like</small></i>
+                                    </button>
 
-        <label for="timezone">Timezone</label>
-        <select name="timezone" id="timezone" />
-            <?php foreach ($timezones as $display => $value): ?>
-                <option value=<?= $value ?>><?= $display ?></option>
-            <?php endforeach; ?>
-        </select>
+                                    <!-- <button type="button" id="like-btn-2" class="p-1 border-0 bg-light btn">
+                                    <i class="fa fa-thumbs-up" aria-hidden="true"><small class="pl-1">Like</small></i>
+                                    </button>
 
-        <button type="submit" name="update_profile-btn">Save Changes</button>
-    </form>
+                                    <button type="button" id="dislike-btn" class="p-1 border-0 bg-light btn">
+                                    <i class="fa fa-thumbs-down" aria-hidden="true"><small class="pl-1">Dislike</small></i>
+                                    </button> -->
 
-    <a style="color: white;" href="app/users/logout.app_users.php?clicked=true" title="Logout">Logout</a>
-</main>
+                                    <div>
+                                        <button id="edit-post" type="button" class="btn-small btn-info"><i class="fa fa-pencil-square-o pr-1" aria-hidden="true"></i>Edit</button>
+                                        <button id="delete-post" type="button" class="btn-small btn-danger disabled"><i class="fa fa-trash-o pr-1" aria-hidden="true"></i>Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div><!-- End column 2 -->
+
+            </div><!-- End main row -->
+        </div><!-- End main container -->
+    </main>
 
 <?php require __DIR__.'/views/footer.php'; ?>

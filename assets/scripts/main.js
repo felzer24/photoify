@@ -19,7 +19,17 @@ const editAccountOverlayBtn = document.getElementById('edit-account');
 // Prevent Enter-key in textareas
 const textAreasPrevent = document.querySelectorAll('textarea');
 
+// Filename for profile file-input
+const profileInputFile = document.querySelector('.profile-input-file');
+const filenameProfile = document.querySelector('.filename-profile');
+
 // Code do not edit
+
+profileInputFile.addEventListener('change', () => {
+    if (profileInputFile.value != "") {
+        filenameProfile.children[0].textContent = profileInputFile.files[0].name;
+    }
+});
 
 mobileMenu.addEventListener('click', () => {
     firstColumn.classList.toggle('mb-3');
