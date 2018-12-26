@@ -1,5 +1,11 @@
-<?php require __DIR__.'/views/header.php'; ?>
+<?php
+    require __DIR__.'/views/header.php';
 
+    if (!isset($_SESSION['logedin'])) {
+        redirect('/');
+        exit();
+    }
+?>
     <main data-errors="<?= $_SESSION['page']['error'] ?? 'no' ?>">
         <!-- Start main container -->
         <div class="container">
