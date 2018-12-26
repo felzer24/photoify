@@ -1,5 +1,7 @@
 'use strict';
 
+const mainErrorCheck = document.querySelector('main');
+
 // Mobile-menu
 const mobileMenu = document.querySelector('.mobile-menu');
 const wrapperFirstColumn = document.getElementById('wrapper-first-column');
@@ -29,6 +31,12 @@ const myfileInput = document.querySelector('.myfile-input');
 
 // Code do not edit
 
+const showAccountOverlay = () => {
+    editToggleOverlay.classList.add('overlay-display');
+    mobileMenu.style.pointerEvents = "none";
+    secondColumn.classList.add('d-none');
+}
+
 profileInputFile.addEventListener('change', () => {
     if (profileInputFile.value != "") {
         filenameProfile.children[0].textContent = profileInputFile.files[0].name;
@@ -48,10 +56,12 @@ mobileMenu.addEventListener('click', () => {
     postModuleBorderRadius.classList.toggle('border-top__toggle');
 });
 
+if (mainErrorCheck.dataset.errors === 'yes'){
+    showAccountOverlay();
+}
+
 editAccountOverlayBtn.addEventListener('click', () => {
-    editToggleOverlay.classList.add('overlay-display');
-    mobileMenu.style.pointerEvents = "none";
-    secondColumn.classList.add('d-none');
+    showAccountOverlay();
 });
 
 editCloseOverlayBtn.addEventListener('click', () => {

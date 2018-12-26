@@ -1,6 +1,6 @@
 <?php require __DIR__.'/views/header.php'; ?>
 
-    <main>
+    <main data-errors="<?= $_SESSION['page']['error'] ?? 'no' ?>">
         <!-- Start main container -->
         <div class="container">
             <!-- Start main row -->
@@ -9,8 +9,8 @@
                 <!-- Start column 1 -->
                 <div id="first-column" class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mb-0 mb-lg-3">
 
-                    <div class="my-radius-none alert alert-secondary m-0 d-flex align-items-center justify-content-center">
-                        <small><strong>Messages will appear here</strong></small>
+                    <div class="my-radius-none alert <?= $_SESSION['banner']['class'] ?? 'alert-secondary' ?> m-0 d-flex align-items-center justify-content-center">
+                        <small><strong><?= $_SESSION['banner']['message'] ?? 'Messages will appear here' ?></strong></small>
                     </div>
 
                     <!-- Start user-info column wrapper -->
@@ -49,12 +49,13 @@
 
                                                 <div class="form-group">
                                                     <label for="profile_bio" class="float-left">Update biography</label>
-                                                    <textarea id="profile_bio" class="form-control" name="profile_bio" maxlength="100"><?= $profile_bio ?></textarea>
+                                                    <textarea id="profile_bio" class="form-control" name="profile_bio" maxlength="100"
+                                                    placeholder="<?= $_SESSION['errors']['profile_bio'] ?? 'Your biography' ?>" /><?= $profile_bio ?></textarea>
                                                 </div>
 
                                                 <div class="form-group">
                                                     <label for="email" class="float-left">Update email</label>
-                                                    <input id="email" class="form-control" name="email" type="email" value="<?= $email ?>" required />
+                                                    <input id="email" class="form-control" name="email" type="text" value="<?= $email ?>" />
                                                 </div>
 
                                                 <div class="form-group">
@@ -72,14 +73,14 @@
                                                 </div>
 
                                                 <div class="form-group">
-                                                    <label for="opassword" class="float-left">Update password</label>
-                                                    <input id="opassword" class="form-control" name="cpassword" type="password" placeholder="Current password" required />
+                                                    <label for="cpassword" class="float-left">Update password</label>
+                                                    <input id="cpassword" class="form-control" name="cpassword" type="password" placeholder="Current password" />
                                                 </div>
                                                 <div class="form-group">
-                                                    <input id="npassword" class="form-control" name="npassword" type="password" placeholder="Set a new password" required />
+                                                    <input id="npassword" class="form-control" name="npassword" type="password" placeholder="Set a new password" />
                                                 </div>
                                                 <div class="form-group">
-                                                    <input id="rpassword" class="form-control" name="rpassword" type="password" placeholder="Repeat new password" required />
+                                                    <input id="rpassword" class="form-control" name="rpassword" type="password" placeholder="Repeat new password" />
                                                 </div>
 
                                                 <button type="submit" class="btn btn-success my-2" name="update_profile-btn"><i class="fa fa-floppy-o pr-1" aria-hidden="true"></i>Save Changes</button>

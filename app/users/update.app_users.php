@@ -4,63 +4,72 @@ declare(strict_types=1);
 
 require __DIR__.'/../autoload.php';
 
+$_SESSION['page']['error'] = 'yes';
+$user_id = $_SESSION['logedin']['user_id'];
+$_SESSION['banner']['class'] = 'alert-danger';
+
+$profile_pic = $_SESSION['logedin']['profile_pic'];
+$profile_bio = $_SESSION['logedin']['profile_bio'];
+$fullname = $_SESSION['logedin']['fullname'];
+$timezone = $_SESSION['logedin']['timezone'];
+$email = $_SESSION['logedin']['email'];
+
 if (isset($_POST['update_profile-btn'])) {
 
-    $user_id = $_SESSION['logedin']['user_id'];
-    $profile_pic = $_FILES['profile_pic'];
+    if (isset($_FILES['profile_pic']) && !empty($_FILES['profile_pic']['size'])) {
+        require __DIR__.'/update_modules/module_avatar.php';
+    }
 
-    if(!in_array($profile_pic['type'], ['image/jpeg', 'image/png', 'image/gif'])) {
-        $_SESSION['banner']['message'] = 'Filetype is not allowed';
-        $_SESSION['banner']['class'] = 'error';
+    if (isset($_POST['profile_bio']) && !empty($_POST['profile_bio'])) {
+        require __DIR__.'/update_modules/module_biography.php';
+    }
+
+    if (isset($_POST['email']) && !empty($_POST['email'])) {
+        if ($email !== $_POST['email']){
+            require __DIR__.'/update_modules/module_email.php';
+        }
+    }
+
+    if (isset($_POST['fullname']) && !empty($_POST['fullname'])) {
+        $fullname = trim(filter_var($_POST['fullname'], FILTER_SANITIZE_STRING));
+        $_SESSION['logedin']['fullname'] = $fullname;
+    }
+
+    if (isset($_POST['timezone']) && !empty($_POST['timezone'])) {
+        $timezone = $_POST['timezone'];
+        $_SESSION['logedin']['timezone'] = $timezone;
+    }
+
+    if (isset($_POST['cpassword'], $_POST['npassword'], $_POST['rpassword'])){
+
+        $cpassword = $_POST['cpassword'];
+        $npassword = $_POST['npassword'];
+        $rpassword = $_POST['rpassword'];
+
+        if (!empty($cpassword)) {
+            require __DIR__.'/update_modules/module_password.php';
+        }
+    }
+
+    if (isset($_SESSION['errors']) && count($_SESSION['errors']) > 0) {
+        $_SESSION['banner']['message'] = 'Check fields for errors';
         redirect('/account.php');
         exit();
     }
 
-    if($profile_pic['size'] > 2097152) {
-        $_SESSION['banner']['message'] = 'File size exceeds 2MB';
-        $_SESSION['banner']['class'] = 'error';
-        redirect('/account.php');
-        exit();
-    }
-
-    $statement = $pdo->query("SELECT profile_pic FROM users WHERE user_id = $user_id;");
-
-    if (!$statement) {
-        die(var_dump($pdo->errorInfo()));
-    }
-
-    $current_images = $statement->fetch(PDO::FETCH_ASSOC);
-    $current_image = $current_images['profile_pic'];
-    $dir = __DIR__.'/../../assets/images/profiles/';
-
-    if(!in_array($current_image, ['default_profile.png'])){
-        unlink($dir.$current_image);
-    }
-
-    $file_exp = explode('.', $profile_pic['name']);
-    $file_ext = strtolower(end($file_exp));
-    $random = rand(10, 90);
-
-    $newfilename = "profile_$user_id$random.$file_ext";
-    $destination = $dir.$newfilename;
-
-    move_uploaded_file($profile_pic['tmp_name'], $destination);
-    $_SESSION['logedin']['profile_pic'] = $newfilename;
-
-    $sql = "UPDATE users SET profile_pic = '$newfilename' WHERE user_id = '$user_id';";
+    $sql = "UPDATE users SET profile_pic = '$profile_pic', profile_bio = '$profile_bio', email = '$email', fullname = '$fullname', timezone = '$timezone' WHERE user_id = '$user_id';";
     $statement = $pdo->query($sql);
 
     if (!$statement) {
         die(var_dump($pdo->errorInfo()));
     }
 
-    $_SESSION['banner']['message'] = 'New avatar uploaded successfully';
-    $_SESSION['banner']['class'] = 'success';
+    $_SESSION['banner']['message'] = 'Profile updated successfully';
+    $_SESSION['banner']['class'] = 'alert-success';
+    $_SESSION['page']['error'] = 'no';
     redirect('/account.php');
     exit();
 
 } else {
-
     redirect('/account.php');
-
 }
