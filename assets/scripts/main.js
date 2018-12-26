@@ -23,11 +23,21 @@ const textAreasPrevent = document.querySelectorAll('textarea');
 const profileInputFile = document.querySelector('.profile-input-file');
 const filenameProfile = document.querySelector('.filename-profile');
 
+// Filename for post file-input
+const postFilename = document.querySelector('.post-filename');
+const myfileInput = document.querySelector('.myfile-input');
+
 // Code do not edit
 
 profileInputFile.addEventListener('change', () => {
     if (profileInputFile.value != "") {
         filenameProfile.children[0].textContent = profileInputFile.files[0].name;
+    }
+});
+
+myfileInput.addEventListener('change', () => {
+    if (myfileInput.value != "") {
+        postFilename.children[0].textContent = myfileInput.files[0].name;
     }
 });
 

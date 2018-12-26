@@ -7,7 +7,6 @@
             <div class="row text-center my-4">
 
                 <!-- Start column 1 -->
-                <!-- Margin bottom 0 (mb-0) on mobile -->
                 <div id="first-column" class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mb-0 mb-lg-3">
 
                     <div class="my-radius-none alert alert-secondary m-0 d-flex align-items-center justify-content-center">
@@ -144,8 +143,9 @@
                                         <h4>Create a new post</h4>
                                         <form action="app/users/something.php" method="post" enctype="multipart/form-data">
                                             <div class="form-group">
-                                                <label for="postfile" class="float-left">Upload image</label>
-                                                <input id="postfile" class="form-control-file" name="postfile" type="file" />
+                                                <small class="post-filename form-text text-muted text-left">Filename: <i>....</i></small>
+                                                <label for="postfile" class="myfile-input-label bg-secondary text-light float-left">Upload image</label>
+                                                <input id="postfile" class="myfile-input form-control-file" name="postfile" type="file" accept=".jpg, .jpeg, .gif, .png" />
                                                 <small class="form-text text-muted text-left">Accepted filetypes: .jpg .jpeg .png .gif Maxfilesize: 2MB</small>
                                             </div>
                                             <div class="form-group">
