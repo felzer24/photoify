@@ -48,7 +48,7 @@
                                             <form action="app/users/update.app_users.php" method="post" enctype="multipart/form-data">
                                                 <div class="form-group">
                                                     <small class="filename-profile form-text text-muted text-left">Filename: <i>....</i></small>
-                                                    <label for="profile_pic" class="profile-input-label bg-secondary text-light float-left">Click to upload your Avatar</label>
+                                                    <label for="profile_pic" class="profile-input-label bg-secondary text-light float-left">Upload your Avatar</label>
                                                     <input id="profile_pic" class="profile-input-file form-control-file" name="profile_pic" type="file" accept=".jpg, .jpeg, .gif, .png" />
                                                     <small class="form-text text-muted text-left">Accepted filetypes: .jpg .jpeg .png .gif Maxfilesize: 2MB</small>
                                                 </div>
@@ -56,7 +56,7 @@
                                                 <div class="form-group">
                                                     <label for="profile_bio" class="float-left">Update biography</label>
                                                     <textarea id="profile_bio" class="form-control" name="profile_bio" maxlength="100"
-                                                    placeholder="<?= $_SESSION['errors']['profile_bio'] ?? 'Your biography' ?>" /><?= $profile_bio ?></textarea>
+                                                    placeholder="<?= $_SESSION['errors']['profile_bio'] ?? 'Your biography' ?>"><?= $profile_bio ?></textarea>
                                                 </div>
 
                                                 <div class="form-group">
@@ -148,16 +148,17 @@
                                     <!-- Start container for form -->
                                     <div class="container">
                                         <h4>Create a new post</h4>
-                                        <form action="app/users/something.php" method="post" enctype="multipart/form-data">
+                                        <form action="app/posts/store.php" method="post" enctype="multipart/form-data">
                                             <div class="form-group">
                                                 <small class="post-filename form-text text-muted text-left">Filename: <i>....</i></small>
                                                 <label for="postfile" class="myfile-input-label bg-secondary text-light float-left">Upload image</label>
                                                 <input id="postfile" class="myfile-input form-control-file" name="postfile" type="file" accept=".jpg, .jpeg, .gif, .png" />
-                                                <small class="form-text text-muted text-left">Accepted filetypes: .jpg .jpeg .png .gif Maxfilesize: 2MB</small>
+                                                <small class="form-text text-muted text-left">Accepted filetypes: .jpg .jpeg .png .gif Maxfilesize: 4MB</small>
                                             </div>
                                             <div class="form-group">
                                                 <label for="postdesc" class="float-left">Add description</label>
-                                                <textarea id="postdesc" class="form-control" name="postdesc" maxlength="100"></textarea>
+                                                <textarea id="postdesc" class="form-control" name="postdesc" maxlength="105"
+                                                placeholder="<?= $_SESSION['errors']['post_desc'] ?? 'Post description' ?>"></textarea>
                                             </div>
                                             <button class="btn btn-primary btn-block" type="submit" name="timeline_post-btn"><i class="fa fa-arrow-circle-o-down pr-1" aria-hidden="true"></i>Post to timeline</button>
                                         </form>
