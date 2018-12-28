@@ -13,6 +13,8 @@ if (isset($_POST['signup-btn'])) {
     $npassword = $_POST['npassword'];
     $rpassword = $_POST['rpassword'];
 
+    $_SESSION['banner']['class'] = 'alert-danger';
+
     if (empty($email) || filter_var($email, FILTER_VALIDATE_EMAIL) != true) {
         $_SESSION['errors']['email'] = 'Please provide a valid email';
     } else {
@@ -37,7 +39,6 @@ if (isset($_POST['signup-btn'])) {
 
     if (isset($_SESSION['errors']) && count($_SESSION['errors']) > 0) {
         $_SESSION['banner']['message'] = 'Check fields for errors';
-        $_SESSION['banner']['class'] = 'error';
         redirect('/signup.php');
         exit();
     }
@@ -46,7 +47,6 @@ if (isset($_POST['signup-btn'])) {
         $_SESSION['errors']['npassword'] = 'Password does not match';
         $_SESSION['errors']['rpassword'] = 'Password does not match';
         $_SESSION['banner']['message'] = 'Check fields for errors';
-        $_SESSION['banner']['class'] = 'error';
         redirect('/signup.php');
         exit();
     }
@@ -66,8 +66,7 @@ if (isset($_POST['signup-btn'])) {
     if ($credentials['username'] === $username || $credentials['email'] === $email) {
         unset($_SESSION['errors']);
         unset($_SESSION['values']);
-        $_SESSION['banner']['message'] = 'Email or Password already registred';
-        $_SESSION['banner']['class'] = 'error';
+        $_SESSION['banner']['message'] = 'Email or Username already registred';
         redirect('/signup.php');
     }
 
@@ -87,7 +86,8 @@ if (isset($_POST['signup-btn'])) {
     $statement->execute();
 
     $_SESSION['banner']['message'] = 'You are now registred';
-    $_SESSION['banner']['class'] = 'success';
+    $_SESSION['banner']['class'] = 'alert-success';
+    unset($_SESSION['values']);
     redirect('/');
     exit();
 

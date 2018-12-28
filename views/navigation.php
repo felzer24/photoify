@@ -1,10 +1,9 @@
 <?php if (isset($_SESSION['logedin'])): ?>
 
-    <body>
         <header class="position-relative">
             <nav class="navbar main navbar-light bg-light my-orange-color">
                 <div class="container">
-                    <a class="navbar-brand font-weight-bold" href="/">Photoify</a>
+                    <a class="navbar-brand font-weight-bold" href="/account.php">Photoify</a>
 
                     <i class="navbar font-weight-bold d-none d-lg-block fa fa-sign-out" aria-hidden="true">
                         <a class="pl-2 text-dark" href="app/users/logout.app_users.php?clicked=true" title="Logout">Logout</a>

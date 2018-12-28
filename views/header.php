@@ -22,5 +22,6 @@
     <meta name="keywords" content="Photoify, Project, School, Login, database, PHP" />
     <title>Photoify Bootstrap</title>
 </head>
+<body>
 
 <?php require __DIR__.'/navigation.php'; ?>

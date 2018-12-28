@@ -6,11 +6,15 @@ require __DIR__.'/../autoload.php';
 
 if (isset($_POST['login-btn'])) {
 
+    $_SESSION['banner']['class'] = 'alert-danger';
+
     $username = trim(filter_var($_POST['username'], FILTER_SANITIZE_STRING));
     $password = $_POST['password'];
 
     if (empty($username)) {
         $_SESSION['errors']['username'] = 'Please provide a username';
+    } else {
+        $_SESSION['values']['username'] = $username;
     }
 
     if (empty($password)) {
@@ -19,7 +23,6 @@ if (isset($_POST['login-btn'])) {
 
     if (isset($_SESSION['errors']) && count($_SESSION['errors']) > 0) {
         $_SESSION['banner']['message'] = 'Check fields for errors';
-        $_SESSION['banner']['class'] = 'error';
         redirect('/');
         exit();
     }
@@ -36,9 +39,9 @@ if (isset($_POST['login-btn'])) {
     $credentials = $statement->fetch(PDO::FETCH_ASSOC);
 
     if ($credentials != true || password_verify($password, $credentials['password']) != true) {
+
         unset($_SESSION['errors']);
         $_SESSION['banner']['message'] = 'You provided wrong credentials';
-        $_SESSION['banner']['class'] = 'error';
         redirect('/');
         exit();
 
@@ -56,6 +59,8 @@ if (isset($_POST['login-btn'])) {
                 'profile_bio' => $credentials['profile_bio'],
                 'created_at' => $credentials['created_at']
             ];
+            unset($_SESSION['errors']);
+            unset($_SESSION['banner']);
             redirect('/account.php');
             exit();
         }
@@ -64,5 +69,4 @@ if (isset($_POST['login-btn'])) {
 } else {
 
     redirect('/');
-
 }

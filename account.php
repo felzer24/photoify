@@ -15,7 +15,7 @@
                 <!-- Start column 1 -->
                 <div id="first-column" class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mb-0 mb-lg-3">
 
-                    <div class="my-radius-none alert <?= $_SESSION['banner']['class'] ?? 'alert-secondary' ?> m-0 d-flex align-items-center justify-content-center">
+                    <div class="my-radiusb-none alert <?= $_SESSION['banner']['class'] ?? 'alert-secondary' ?> m-0 d-flex align-items-center justify-content-center">
                         <small><strong><?= $_SESSION['banner']['message'] ?? 'Messages will appear here' ?></strong></small>
                     </div>
 
