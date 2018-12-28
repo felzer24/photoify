@@ -47,6 +47,11 @@ if (isset($_POST['timeline_post-btn'])) {
             $_SESSION['errors']['post_desc'] = 'Max 100 characters';
             $_SESSION['logedin']['post_desc'] = '';
         }
+
+    } else {
+
+        $post_desc = "No description";
+
     }
 
     if (isset($_SESSION['errors']) && count($_SESSION['errors']) > 0) {
@@ -55,7 +60,22 @@ if (isset($_POST['timeline_post-btn'])) {
         exit();
     }
 
-} else {
+    $statement = $pdo->prepare('INSERT INTO posts (content,description,user_id) VALUES (:content,:description,:user_id);');
+
+    if (!$statement) {
+        die(var_dump($pdo->errorInfo()));
+    }
+
+    $statement->bindParam(':content', $filename, PDO::PARAM_STR);
+    $statement->bindParam(':description', $post_desc, PDO::PARAM_STR);
+    $statement->bindParam(':user_id', $user_id, PDO::PARAM_INT);
+    $statement->execute();
+
+    $_SESSION['banner']['message'] = 'Posted successfully to timeline';
+    $_SESSION['banner']['class'] = 'alert-success';
     redirect('/account.php');
     exit();
+
+} else {
+    redirect('/account.php');
 }

@@ -157,7 +157,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="postdesc" class="float-left">Add description</label>
-                                                <textarea id="postdesc" class="form-control" name="postdesc" maxlength="105"
+                                                <textarea id="postdesc" class="form-control" name="postdesc" maxlength="100"
                                                 placeholder="<?= $_SESSION['errors']['post_desc'] ?? 'Post description' ?>"></textarea>
                                             </div>
                                             <button class="btn btn-primary btn-block" type="submit" name="timeline_post-btn"><i class="fa fa-arrow-circle-o-down pr-1" aria-hidden="true"></i>Post to timeline</button>
