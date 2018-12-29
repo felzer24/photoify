@@ -29,6 +29,11 @@ const filenameProfile = document.querySelector('.filename-profile');
 const postFilename = document.querySelector('.post-filename');
 const myfileInput = document.querySelector('.myfile-input');
 
+// Edit Post Overlays
+const [...editPostOverlays] = document.querySelectorAll('.edit-post-overlay');
+const [...updateFileInputs] = document.querySelectorAll('.update-file-input');
+const [...updateFileLabels] = document.querySelectorAll('.update-file-label');
+
 // Code do not edit
 
 const showAccountOverlay = () => {
@@ -47,6 +52,14 @@ myfileInput.addEventListener('change', () => {
     if (myfileInput.value != "") {
         postFilename.children[0].textContent = myfileInput.files[0].name;
     }
+});
+
+updateFileInputs.forEach((updateFileInput) => {
+    updateFileInput.addEventListener('change', () => {
+        if (updateFileInput.value != "") {
+            console.dir(updateFileInput.labels[0].previousElementSibling.children[0].textContent = updateFileInput.files[0].name);
+        };
+    });
 });
 
 mobileMenu.addEventListener('click', () => {

@@ -168,46 +168,9 @@
                         </section><!-- End section 1 for column 2 -->
 
                         <article class="mt-3">
-                            <div class="card" style="width: 100%;">
-
-                                <div class="card-header d-flex justify-content-between align-items-center px-2" style="height: 50px;">
-                                    <img src="assets/images/profiles/<?= $profile_pic ?>" alt="Profile picture for <?= $username ?>" class="img-thumbnail" style="height: auto; max-width: 40px; display: block;" />
-                                    <small>Posted: yyyy-mm-dd hh-mm-ss</small>
-                                </div>
-
-                                <div class="card-body p-0">
-                                    <img class="card-img-top img-fluid" src="assets/images/profile_1-post_1.jpg" alt="Card image cap" />
-                                    <p class="card-text text-left bg-light py-2 px-4 m-0">
-                                        <small>Some quick example text to build on the card title and make up the bulk of the card's content.</small>
-                                    </p>
-                                    <!-- <div class="form-group m-0">
-                                    <textarea class="form-control post-desc" readonly name="postdesc" style="border-radius: 0px; border: 0;" maxlength="100">Some quick example text to build on the card title and make up the bulk of the card's content.</textarea>
-                                    </div> -->
-                                </div>
-
-                                <div class="card-footer d-flex justify-content-between align-items-center px-2">
-
-                                    <button type="button" id="like-btn-1" class="p-1 border-0 bg-light btn">
-                                        <i class="fa fa-heart" aria-hidden="true"><small class="pl-1">Like</small></i>
-                                    </button>
-
-                                    <!-- <button type="button" id="like-btn-2" class="p-1 border-0 bg-light btn">
-                                    <i class="fa fa-thumbs-up" aria-hidden="true"><small class="pl-1">Like</small></i>
-                                    </button>
-
-                                    <button type="button" id="dislike-btn" class="p-1 border-0 bg-light btn">
-                                    <i class="fa fa-thumbs-down" aria-hidden="true"><small class="pl-1">Dislike</small></i>
-                                    </button> -->
-
-                                    <div>
-                                        <button id="edit-post" type="button" class="btn-small btn-info"><i class="fa fa-pencil-square-o pr-1" aria-hidden="true"></i>Edit</button>
-                                        <button id="delete-post" type="button" class="btn-small btn-danger disabled"><i class="fa fa-trash-o pr-1" aria-hidden="true"></i>Delete</button>
-                                    </div>
-                                </div>
-                            </div>
+                            <?php require __DIR__.'/views/post.php'; ?>
                         </article>
                     </div><!-- End column 2 -->
-
             </div><!-- End main row -->
         </div><!-- End main container -->
     </main>

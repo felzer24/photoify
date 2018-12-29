@@ -70,14 +70,14 @@ textarea.form-control.post-desc:focus{
   box-shadow: none;
 }
 
-label.profile-input-label, label.myfile-input-label{
+label.profile-input-label, label.myfile-input-label, label.update-file-label{
   padding: 0.5rem;
   cursor: pointer;
   width: 100%;
   margin: 0;
 }
 
-input.profile-input-file, input.myfile-input{
+input.profile-input-file, input.myfile-input, input.update-file-input{
   display: none;
 }
 
