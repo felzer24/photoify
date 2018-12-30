@@ -19,7 +19,7 @@
             <input type="hidden" name="filename" value="<?= $post['content'] ?>">
             <button type="submit" class="btn btn-primary btn-block" name="update-post-btn"><i class="fa fa-pencil-square-o pr-1" aria-hidden="true"></i>Update post</button>
             <button type="button" class="post-close-overlay-btns btn btn-dark btn-block"><i class="fa fa-times-circle-o pr-1" aria-hidden="true"></i>Close Window</button>
-            <button type="button" class="btn btn-danger btn-block"><i class="fa fa-trash-o pr-1" aria-hidden="true"></i>Delete post</button>
+            <a href="app/posts/delete.php?action=delete-post-link&post_id=<?= $post['post_id'] ?>" class="btn btn-danger btn-block"><i class="fa fa-trash-o pr-1" aria-hidden="true"></i>Delete post</a>
         </form>
     </div><!-- End container for form -->
 </div><!-- End jumbotron for form -->
