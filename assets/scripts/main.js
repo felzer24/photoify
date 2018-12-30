@@ -32,9 +32,24 @@ const myfileInput = document.querySelector('.myfile-input');
 // Edit Post Overlays
 const [...editPostOverlays] = document.querySelectorAll('.edit-post-overlay');
 const [...updateFileInputs] = document.querySelectorAll('.update-file-input');
-const [...updateFileLabels] = document.querySelectorAll('.update-file-label');
+const [...editPostButtons] = document.querySelectorAll('.btn-post-edit');
+const [...postOverlaysClose] = document.querySelectorAll('.post-close-overlay-btns');
+// const [...updateFileLabels] = document.querySelectorAll('.update-file-label');
 
 // Code do not edit
+
+editPostButtons.forEach((editPostButton) => {
+    editPostButton.addEventListener('click', () =>{
+        let postId = editPostButton.dataset.id;
+        document.getElementById(`${postId}`).classList.add('d-flex');
+    });
+});
+
+postOverlaysClose.forEach((postOverlayClose) => {
+    postOverlayClose.addEventListener('click', () => {
+        postOverlayClose.offsetParent.classList.remove('d-flex');
+    });
+});
 
 const showAccountOverlay = () => {
     editToggleOverlay.classList.add('overlay-display');
@@ -57,7 +72,7 @@ myfileInput.addEventListener('change', () => {
 updateFileInputs.forEach((updateFileInput) => {
     updateFileInput.addEventListener('change', () => {
         if (updateFileInput.value != "") {
-            console.dir(updateFileInput.labels[0].previousElementSibling.children[0].textContent = updateFileInput.files[0].name);
+            updateFileInput.labels[0].previousElementSibling.children[0].textContent = updateFileInput.files[0].name;
         };
     });
 });

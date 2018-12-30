@@ -12,7 +12,7 @@ foreach ($posts as $post): ?>
 
 <?php
 
-$datetime = date_create($post['created_at'], timezone_open('UTC'));
+$datetime = date_create($post['updated_at'], timezone_open('UTC'));
 date_timezone_set($datetime, timezone_open($timezone));
 
 ?>
@@ -22,7 +22,7 @@ date_timezone_set($datetime, timezone_open($timezone));
         <div class="d-flex justify-content-between align-items-center">
             <img src="assets/images/profiles/<?= $post['profile_pic'] ?>" alt="Profile picture for <?= $post['username'] ?>" class="img-thumbnail" style="height: auto; max-width: 40px; display: block;" />
             <?php if ($post['username'] === $username): ?>
-                <button id="edit-post" type="button" class="btn-small btn-info ml-2"><i class="fa fa-pencil-square-o pr-1" aria-hidden="true"></i>Edit</button>
+                <button data-id="post-<?= $post['post_id'] ?>" " type="button" class="btn-post-edit btn-small btn-info ml-2"><i class="fa fa-pencil-square-o pr-1" aria-hidden="true"></i>Edit</button>
             <?php endif ?>
         </div>
         <small>Posted by: <?= $post['username'] ?></small>
@@ -46,7 +46,7 @@ date_timezone_set($datetime, timezone_open($timezone));
         </div>
 
         <div>
-            <small>Posted on: <?= date_format($datetime, 'Y-m-d H:i:s') ?></small>
+            <small><?= date_format($datetime, 'Y-m-d H:i:s') ?></small>
         </div>
     </div>
     <?php require __DIR__.'/post-overlay.php'; ?>
