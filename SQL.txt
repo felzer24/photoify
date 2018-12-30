@@ -4,3 +4,14 @@ LEFT JOIN users c ON a.user_id=c.user_id;
 
 SELECT a.*, b.username, b.profile_pic FROM posts a
 LEFT JOIN users b ON a.user_id=b.user_id ORDER BY created_at DESC;
+
+
+SELECT COUNT(*) AS likes FROM likes WHERE post_id=5;
+
+$sql = SELECT * FROM likes WHERE user_id=1 AND post_id=10;
+
+if ($sql) {
+  <a href="dislike.php?inc-like-btn&post_id=10">dislike</a>
+} else {
+  <a href="like.php?add-like-btn&post_id=10">">like</a>
+}
