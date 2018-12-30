@@ -1,4 +1,4 @@
-## Assignment in php photoify - Yrgo
+## Assignment in PHP ( photoify ) - Yrgo
 
 > Christmas assignment 2018 in PHP at Yrgo in Sweden Gothenburg. Deadline for: 2019-01-17 09:00 
 This assignment is called photoify and is a supposed to mimic instagram functionalities like user account creation, log in features + more
@@ -6,7 +6,7 @@ This assignment is called photoify and is a supposed to mimic instagram function
 _Languages Used:_ <br/>
 _HTML CSS PHP SQL Javascript Markdown <- Readme.md_
 
-(In this project we use an sqlite database to store information)
+**( In this project we use an sqlite database to store information )**
 
 [Code License: MIT](https://choosealicense.com/licenses/mit/)
 
@@ -34,9 +34,11 @@ _HTML CSS PHP SQL Javascript Markdown <- Readme.md_
 git clone 
 ```
 
-### Usage:
+#### Usage:
 
-### Functions:
+Example text :)
+
+#### Functions:
 
 ###### This project incorporates below functionalities:
 * User account creations
@@ -50,13 +52,22 @@ git clone
 * 
 * 
 
----
+#### Testers:
 
-#### Favicon:
+Name|OS|Browser|Status
+-|-|-|-
+[Fredrik Leemann](https://github.com/freddan88 "Fredrik Leemann GitHub")|OS Version |Browser|?
+[Fredrik Leemann](https://github.com/freddan88 "Fredrik Leemann GitHub")|OS Version |Browser|?
+[Fredrik Leemann](https://github.com/freddan88 "Fredrik Leemann GitHub")|OS Version |Browser|?
+[Fredrik Leemann](https://github.com/freddan88 "Fredrik Leemann GitHub")|OS Version |Browser|?
+
+#### References:
+
+##### Favicon:
 https://favicon.io
 
 ###### Credits: [John Sorrentino](https://twitter.com/johnsorrentino "John Sorrentino Twitter profile")
 
-###### [Download this icon here](https://favicon.io/emoji-favicons/busts-in-silhouette/)
+###### [Downloadpage here](https://favicon.io/emoji-favicons/busts-in-silhouette/)
 
 ---
