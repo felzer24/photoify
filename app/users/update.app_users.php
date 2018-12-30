@@ -57,12 +57,20 @@ if (isset($_POST['update_profile-btn'])) {
         exit();
     }
 
-    $sql = "UPDATE users SET profile_pic = '$profile_pic', profile_bio = '$profile_bio', email = '$email', fullname = '$fullname', timezone = '$timezone' WHERE user_id = '$user_id';";
-    $statement = $pdo->query($sql);
+    $sql = "UPDATE users SET profile_pic = :profile_pic, profile_bio = :profile_bio, email = :email, fullname = :fullname, timezone = :timezone WHERE user_id = :user_id;";
+    $statement = $pdo->prepare($sql);
 
     if (!$statement) {
         die(var_dump($pdo->errorInfo()));
     }
+
+    $statement->bindParam(':profile_pic', $profile_pic, PDO::PARAM_STR);
+    $statement->bindParam(':profile_bio', $profile_bio, PDO::PARAM_STR);
+    $statement->bindParam(':email', $email, PDO::PARAM_STR);
+    $statement->bindParam(':fullname', $fullname, PDO::PARAM_STR);
+    $statement->bindParam(':timezone', $timezone, PDO::PARAM_STR);
+    $statement->bindParam(':user_id', $user_id, PDO::PARAM_INT);
+    $statement->execute();
 
     $_SESSION['banner']['message'] = 'Profile updated successfully';
     $_SESSION['banner']['class'] = 'alert-success';
