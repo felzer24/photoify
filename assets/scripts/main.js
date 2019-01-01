@@ -41,11 +41,12 @@ const [...actionLikeBtns] = document.querySelectorAll('.action-btn-likes');
 
 // Code do not edit
 
-actionLikeBtns.forEach((actionLikeBtn) => {
-    actionLikeBtn.addEventListener('click', (btn) =>{
-        console.log(btn);
-    });
-});
+// actionLikeBtns.forEach((actionLikeBtn) => {
+//     actionLikeBtn.addEventListener('click', (e) => {
+//         e.preventDefault();
+//         console.log(actionLikeBtn);
+//     });
+// });
 
 editPostButtons.forEach((editPostButton) => {
     editPostButton.addEventListener('click', () =>{
