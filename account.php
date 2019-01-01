@@ -130,7 +130,7 @@
                                     <ul class="list-group">
                                         <li class="list-group-item text-left">Username: <?= $username ?></li>
                                         <li class="list-group-item text-left">TimeZone: <?= timezone_name_get($my_timezone) ?></li>
-                                        <li class="list-group-item text-left">Created: <?= date_format($datetime, 'Y-m-d H:i:s') ?></li>
+                                        <li class="list-group-item text-left">Account Created: <?= date_format($datetime, 'Y-m-d H:i:s') ?></li>
                                     </ul>
                                 </div>
                             </section>
@@ -167,9 +167,8 @@
                             </div><!-- End container for column 2 section 1 -->
                         </section><!-- End section 1 for column 2 -->
 
-                        <article class="mt-3">
-                            <?php require __DIR__.'/views/post.php'; ?>
-                        </article>
+                        <!-- Inculde post/article-loop here -->
+                        <?php require __DIR__.'/views/post.php'; ?>
                     </div><!-- End column 2 -->
             </div><!-- End main row -->
         </div><!-- End main container -->

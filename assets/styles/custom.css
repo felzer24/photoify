@@ -145,3 +145,13 @@ nav.main{
   width:100%;
   height:100%;
 }
+
+/* Styling for like and dislike icons in posts */
+
+.my-like-icon{
+  color: red;
+}
+
+.my-dislike-icon{
+  color: black;
+}
