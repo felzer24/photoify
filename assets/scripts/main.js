@@ -36,7 +36,16 @@ const [...editPostButtons] = document.querySelectorAll('.btn-post-edit');
 const [...postOverlaysClose] = document.querySelectorAll('.post-close-overlay-btns');
 // const [...updateFileLabels] = document.querySelectorAll('.update-file-label');
 
+// Manage likes on posts
+const [...actionLikeBtns] = document.querySelectorAll('.action-btn-likes');
+
 // Code do not edit
+
+actionLikeBtns.forEach((actionLikeBtn) => {
+    actionLikeBtn.addEventListener('click', (btn) =>{
+        console.log(btn);
+    });
+});
 
 editPostButtons.forEach((editPostButton) => {
     editPostButton.addEventListener('click', () =>{

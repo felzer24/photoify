@@ -66,14 +66,14 @@ foreach ($posts as $post): ?>
                 <div class="d-flex justify-content-start align-items-center">
 
                     <?php if ($liked && $post['username'] !== $username): ?>
-                        <a href="app/posts/likes.php?action=dislike&post_id=<?= $post['post_id'] ?>" class="p-2 border-0 bg-light btn">
+                        <a href="app/posts/likes.php?action=dislike&post_id=<?= $post['post_id'] ?>" class="p-2 border-0 bg-light btn action-btn-likes">
                             <i class="fa fa-heart my-like-icon" aria-hidden="true"></i></a>
                     <?php elseif(!$liked && $post['username'] !== $username): ?>
-                        <a href="app/posts/likes.php?action=like&post_id=<?= $post['post_id'] ?>" class="p-2 border-0 bg-light btn">
+                        <a href="app/posts/likes.php?action=like&post_id=<?= $post['post_id'] ?>" class="p-2 border-0 bg-light btn action-btn-likes">
                             <i class="fa fa-heart my-dislike-icon" aria-hidden="true"></i></a>
                     <?php endif; ?>
 
-                    <small class="pl-1">Likes:</small><small class="font-italic" id="like-counter"><?= $likes[0]['likes'] ?></small>
+                    <small class="pl-1">Likes:</small><small class="font-italic"><?= $likes[0]['likes'] ?></small>
                 </div>
 
                 <div>
