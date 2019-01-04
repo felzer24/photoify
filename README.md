@@ -13,9 +13,15 @@ _HTML CSS PHP SQL Javascript Markdown <- Readme.md_
 ### Installation:
 
 1. Click the green button "clone or download" at top of this github repository <br/>
-*( You also use git from your terminal or GitHub Desktop to clone this repository)*
+*( You can also use git from terminal or GitHub Desktop to clone this repository to your computer )*
+
 2. For easy instalation on Windows, Mac or Linux you can click "Download ZIP"
 3. Extract the compressed zip-archive to the root of your webserver
+4. Change the root of your webserver and start the service...
+
+Example to change the root in MAMP on Mac/Windows
+https://ruifeio.com/2014/08/08/mamp-how-to-change-the-root-directory-on-apache-server/
+
 
 ###### Example Servers and links:
 - [XAMPP](https://www.apachefriends.org/index.html "Download XAMPP for Windows Linux Mac") 
@@ -41,16 +47,16 @@ Example text :)
 #### Functions:
 
 ###### This project incorporates below functionalities:
-[x] User account creations
-* Login functionalities
-* Logout functionalities
-* Functionality to edit you account
-* Uploading of new avatar images
-* Creations of new posts with images and description
-* Edit published posts
-* Delete published posts
-* 
-* 
+* [x] User account creations
+* [x] Login functionalities
+* [x] Logout functionalities
+* [x] Functionality to edit your account
+* [x] Uploading of new avatar images
+* [x] Creations of new posts with images and description
+* [x] Edit published posts
+* [x] Delete published posts
+* [x] like/dislike content
+* [x] Delete your account and all of it´s content
 
 #### Testers:
 
