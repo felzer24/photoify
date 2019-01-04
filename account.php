@@ -100,7 +100,7 @@
                                     <h1 class="display-5 pb-4">DangerZone</h1>
                                     <p class="lead">By clicking the button below your account will get deleted together with all content such as posts, files and personal information</p>
                                     <hr class="my-4" />
-                                    <button type="submit" class="btn btn-danger mt-2 mb-3"><i class="fa fa-trash-o pr-1" aria-hidden="true"></i>Delete Account</button>
+                                    <a href="app/users/delete.app_account.php?action=delete-account-link&check=<?= password_hash($username, PASSWORD_DEFAULT) ?>" class="btn btn-danger mt-2 mb-3"><i class="fa fa-trash-o pr-1" aria-hidden="true"></i>Delete Account</a>
                                 </div>
 
                             </section>
