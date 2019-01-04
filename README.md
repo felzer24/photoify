@@ -41,7 +41,7 @@ Example text :)
 #### Functions:
 
 ###### This project incorporates below functionalities:
-* User account creations
+[x] User account creations
 * Login functionalities
 * Logout functionalities
 * Functionality to edit you account
