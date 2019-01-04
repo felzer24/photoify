@@ -39,6 +39,12 @@ foreach ($posts as $post): ?>
 
     $liked = $statement->fetch(PDO::FETCH_ASSOC);
 
+    if ($liked) {
+        $action = 'liked';
+    } else {
+        $action = 'disliked';
+    }
+
     ?>
 
     <article class="mt-3">
@@ -65,13 +71,13 @@ foreach ($posts as $post): ?>
             <div class="card-footer d-flex justify-content-between align-items-center px-2">
                 <div class="d-flex justify-content-start align-items-center">
 
-                    <?php if ($liked && $post['username'] !== $username): ?>
-                        <a href="app/posts/likes.php?action=dislike&post_id=<?= $post['post_id'] ?>" class="p-2 border-0 bg-light btn action-btn-likes">
-                            <i class="fa fa-heart my-like-icon" aria-hidden="true"></i></a>
-                    <?php elseif(!$liked && $post['username'] !== $username): ?>
-                        <a href="app/posts/likes.php?action=like&post_id=<?= $post['post_id'] ?>" class="p-2 border-0 bg-light btn action-btn-likes">
-                            <i class="fa fa-heart my-dislike-icon" aria-hidden="true"></i></a>
-                    <?php endif; ?>
+                <?php if ($post['username'] !== $username): ?>
+                    <form method="post" class="my-like-form liked" >
+                        <input type="hidden" name="post_id" value="<?= $post_id ?>" />
+                        <input type="hidden" name="action" value="<?= $action ?>" />
+                        <button type="submit"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                    </form>
+                <?php endif; ?>
 
                     <small class="pl-1">Likes:</small><small class="font-italic"><?= $likes[0]['likes'] ?></small>
                 </div>

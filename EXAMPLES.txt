@@ -16,3 +16,7 @@ if ($sql) {
 } else {
   <a href="like.php?add-like-btn&post_id=10">">like</a>
 }
+
+action.value = 'unlike';
+action.value = 'like';
+console.log(action.value); [ unlike/like ]

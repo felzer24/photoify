@@ -1,5 +1,6 @@
 'use strict';
 
+// Check page for errors
 const mainErrorCheck = document.querySelector('main');
 
 // Mobile-menu
@@ -34,19 +35,33 @@ const [...editPostOverlays] = document.querySelectorAll('.edit-post-overlay');
 const [...updateFileInputs] = document.querySelectorAll('.update-file-input');
 const [...editPostButtons] = document.querySelectorAll('.btn-post-edit');
 const [...postOverlaysClose] = document.querySelectorAll('.post-close-overlay-btns');
-// const [...updateFileLabels] = document.querySelectorAll('.update-file-label');
 
 // Manage likes on posts
-const [...actionLikeBtns] = document.querySelectorAll('.action-btn-likes');
+const [...likeForms] = document.querySelectorAll('.my-like-form');
 
 // Code do not edit
 
-// actionLikeBtns.forEach((actionLikeBtn) => {
-//     actionLikeBtn.addEventListener('click', (e) => {
-//         e.preventDefault();
-//         console.log(actionLikeBtn);
-//     });
-// });
+likeForms.forEach((likeForm) => {
+    likeForm.addEventListener('submit', event => {
+
+        event.preventDefault();
+
+        const formData = new FormData(likeForm);
+
+        if (likeForm[1].value === 'liked') {
+            likeForm[1].value = 'disliked';
+        } else {
+            likeForm[1].value = 'liked';
+        }
+
+        fetch('app/posts/likes.php', {
+            method: 'POST',
+            body: formData
+          })
+          .then(response => response.json())
+          .then(json => likeForm.nextElementSibling.nextSibling.textContent = json.likes);
+    })
+});
 
 editPostButtons.forEach((editPostButton) => {
     editPostButton.addEventListener('click', () =>{

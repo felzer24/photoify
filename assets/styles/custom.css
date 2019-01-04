@@ -148,10 +148,6 @@ nav.main{
 
 /* Styling for like and dislike icons in posts */
 
-.my-like-icon{
+.my-like-form input[value=liked] + button .fa-heart{
   color: red;
-}
-
-.my-dislike-icon{
-  color: black;
 }
