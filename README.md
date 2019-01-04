@@ -86,4 +86,10 @@ https://favicon.io
 ###### _CSS framework_
 https://getbootstrap.com/
 
+##### Markdown quick reference cheat sheet
+https://en.support.wordpress.com/markdown-quick-reference/
+
+##### Zoomable image in markdown
+https://stackoverflow.com/questions/31558605/zoomable-image-in-markdown
+
 ---
