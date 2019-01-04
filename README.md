@@ -16,10 +16,12 @@ _HTML CSS PHP SQL Javascript Markdown <- Readme.md_
 *( You can also use git from terminal or GitHub Desktop to clone this repository to your computer )*
 
 2. For easy instalation on Windows, Mac or Linux you can click "Download ZIP"
-3. Extract the compressed zip-archive to the root of your webserver
-4. Change the root of your webserver and start the service...
 
-Example to change the root in MAMP on Mac/Windows
+3. Extract the compressed zip-archive to the root of your webserver
+
+4. Change the root to point to photoify/photoify-master and start the service
+
+Example to change the root in MAMP on Mac/Windows:<br/>
 https://ruifeio.com/2014/08/08/mamp-how-to-change-the-root-directory-on-apache-server/
 
 
@@ -37,10 +39,14 @@ https://ruifeio.com/2014/08/08/mamp-how-to-change-the-root-directory-on-apache-s
 
 *Example Git Clone*
 ```bash
-git clone 
+git clone https://github.com/freddan88/photoify.git
 ```
 
 #### Usage:
+
+1. Connect to localhost with your browser (preferably google chrome or mozilla firefox)
+2. on the login page you may create a new account by clicking on "Don´t have an account ?"
+3. 
 
 Example text :)
 
@@ -75,5 +81,9 @@ https://favicon.io
 ###### Credits: [John Sorrentino](https://twitter.com/johnsorrentino "John Sorrentino Twitter profile")
 
 ###### [Downloadpage here](https://favicon.io/emoji-favicons/busts-in-silhouette/)
+
+##### Bootstrap 
+###### _CSS framework_
+https://getbootstrap.com/
 
 ---
