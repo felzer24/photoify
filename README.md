@@ -70,7 +70,7 @@ Name|OS|Browser|Status
 -|-|-|-
 [Fredrik Leemann](https://github.com/freddan88 "Fredrik Leemann GitHub")|macOS Yosemite 10.10.5|Mozilla Firefox v.65.0b5|Working
 [Fredrik Leemann](https://github.com/freddan88 "Fredrik Leemann GitHub")|macOS Yosemite 10.10.5|Google Chrome v.72.0.3626.28|Working
-[Fredrik Leemann](https://github.com/freddan88 "Fredrik Leemann GitHub")|OS Version |Browser|?
+[Fredrik Leemann](https://github.com/freddan88 "Fredrik Leemann GitHub")|macOS High Sierra v10.13.6|Google Chrome 71.0.3578.98|Working
 [Fredrik Leemann](https://github.com/freddan88 "Fredrik Leemann GitHub")|OS Version |Browser|?
 
 #### References:
