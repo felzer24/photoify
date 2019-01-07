@@ -1,4 +1,4 @@
-<!-- Toggle d-flex -->
+<!-- Start jumbotron for form -->
 <div id="post-<?= $post['post_id'] ?>" class="edit-post-overlay jumbotron m-0 position-absolute align-items-center d-none">
     <!-- Start container for form -->
     <div class="container">

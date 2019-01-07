@@ -13,7 +13,6 @@ foreach ($posts as $post): ?>
     <?php
 
     $post_id = $post['post_id'];
-
     $user_id = $_SESSION['logedin']['user_id'];
 
     $updated_at = date_create($post['updated_at'], timezone_open('UTC'));
