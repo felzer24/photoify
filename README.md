@@ -15,7 +15,9 @@ _HTML CSS PHP SQL Javascript Markdown <- Readme.md_
 1. Click the green button "clone or download" at top of this github repository <br/>
 *( You can also use git from terminal or GitHub Desktop to clone this repository to your computer )*
 
-2. For easy instalation on Windows, Mac or Linux you can click "Download ZIP"
+~~2. For easy instalation on Windows, Mac or Linux you can click "Download ZIP"~~
+
+2. [Click this link to download this repository as a zip-file]()
 
 3. Extract the compressed zip-archive to the root of your webserver
 
@@ -45,10 +47,12 @@ git clone https://github.com/freddan88/photoify.git
 #### Usage:
 
 1. Connect to localhost with your browser (preferably google chrome or mozilla firefox)
-2. The login page you may create a new account by clicking on "Don´t have an account ?"
-3. 
+2. On login page you may create a new account by clicking on "Don´t have an account ?"
+3. Sign in through the login form and you will be directed to account.php
+4. See the screenshots below for desktop and mobile view...
 
-Example text :)
+##### Desktop
+![Account Desktop](https://github.com/freddan88/Yrgo-assignments/blob/master/03_PHP/photoify/assets/screenshots/account_desktop.jpg)
 
 #### Functions:
 
@@ -74,7 +78,7 @@ Name|OS|Browser|Status
 [Fredrik Leemann](https://github.com/freddan88 "Fredrik Leemann GitHub")|macOS High Sierra v10.13.6|Mozilla Firefox v.65.0b8|Working
 [Fredrik Leemann](https://github.com/freddan88 "Fredrik Leemann GitHub")|macOS High Sierra v10.13.6|Safari v.11.1.2|Working
 
-#### References:
+#### Resources:
 
 ##### Favicon:
 https://favicon.io
