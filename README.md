@@ -17,15 +17,14 @@ _HTML CSS PHP SQL Javascript Markdown <- Readme.md_
 
 2. For easy instalation on Windows, Mac or Linux you can click "Download ZIP"
 
-~~2. [Click this link to download this repository as a zip-file]()~~
+~~2. [Click this link to download this repository as a zip-file](https://github.com/freddan88/photoify)~~
 
 3. Extract the compressed zip-archive to the root of your webserver
 
 4. Change the root to point to photoify/photoify-master and start the service
 
 Guide to change the root in MAMP on Mac/Windows:<br/>
-https://ruifeio.com/2014/08/08/mamp-how-to-change-the-root-directory-on-apache-server/
-
+[mamp-how-to-change-the-root-directory-on-apache-server](https://ruifeio.com/2014/08/08/mamp-how-to-change-the-root-directory-on-apache-server/)
 
 ###### Example Servers and links:
 - [XAMPP](https://www.apachefriends.org/index.html "Download XAMPP for Windows Linux Mac") 
@@ -52,7 +51,20 @@ git clone https://github.com/freddan88/photoify.git
 4. See the screenshots below for desktop and mobile view...
 
 ##### Desktop
+1. Profile-module and overview
+2. Timeline for posts
+3. Create post-module
+4. Button to edit/delete post (Will only appear on user's own posts)
+5. Like-button for posts (Won't appear on user's own posts) 
+6. Button to edit/delete your account and all of its content
+7. Link to be able to log out from your account and end your session
+8. Errors and success messages will appear on here
+
 ![Account Desktop](https://github.com/freddan88/Yrgo-assignments/blob/master/03_PHP/photoify/assets/screenshots/account_desktop.jpg)
+
+##### Mobile
+
+Todo =)
 
 #### Functions:
 
