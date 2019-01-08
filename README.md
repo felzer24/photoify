@@ -9,6 +9,7 @@ _HTML CSS PHP SQL Javascript Markdown <- Readme.md_
 **( In this project we use an sqlite database to store information )**
 
 [Code License: MIT](https://choosealicense.com/licenses/mit/)
+<a href="https://choosealicense.com/licenses/mit/" target="_blank"> Code License: MIT </a>
 
 ### Installation:
 
@@ -27,7 +28,7 @@ Guide to change the root in MAMP on Mac/Windows:<br/>
 [mamp-how-to-change-the-root-directory-on-apache-server](https://ruifeio.com/2014/08/08/mamp-how-to-change-the-root-directory-on-apache-server/)
 
 ###### Example Servers and links:
-- [XAMPP](https://www.apachefriends.org/index.html "Download XAMPP for Windows Linux Mac" :target="_blank")
+- [XAMPP](https://www.apachefriends.org/index.html "Download XAMPP for Windows Linux Mac")
 - [WAMP](https://bitnami.com/stack/wamp/installer "Download WAMP for Windows Mac Linux")
 - [MAMP](https://www.mamp.info/en/downloads "Download MAMP for Mac Windows")
 - [LAMP Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04 "Install LAMP on Ubuntu Linux")
