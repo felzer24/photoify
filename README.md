@@ -111,4 +111,6 @@ Name|OS|Browser|Status
 ##### Zoomable image in markdown
 [Images in markdown](https://stackoverflow.com/questions/31558605/zoomable-image-in-markdown "Zoomable image in markdown - Stackoverflow")
 
+[Images side by side](https://stackoverflow.com/questions/24319505/how-can-one-display-images-side-by-side-in-a-github-readme-md "How can one display images side by side in a GitHub README.md? - Stackoverflow")
+
 ---
