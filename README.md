@@ -69,15 +69,16 @@ git clone https://github.com/freddan88/photoify.git
 * [x] Delete your account and all of it´s content
 
 #### Testers:
-
 Name|OS|Browser|Status
 -|-|-|-
 [Maria Eidland](https://github.com/mariaeid "Maria Eidland GitHub")|Windows 10|?|?
-[Fredrik Leemann](https://github.com/freddan88 "Fredrik Leemann GitHub")|macOS Yosemite 10.10.5|Mozilla Firefox v.65.0b5|Working
-[Fredrik Leemann](https://github.com/freddan88 "Fredrik Leemann GitHub")|macOS Yosemite 10.10.5|Google Chrome v.72.0.3626.28|Working
+[Fredrik Leemann](https://github.com/freddan88 "Fredrik Leemann GitHub")|macOS Yosemite 10.10.5|Mozilla Firefox 65.0b5|Working
+[Fredrik Leemann](https://github.com/freddan88 "Fredrik Leemann GitHub")|macOS Yosemite 10.10.5|Google Chrome 72.0.3626.28|Working
 [Fredrik Leemann](https://github.com/freddan88 "Fredrik Leemann GitHub")|macOS High Sierra v10.13.6|Google Chrome 71.0.3578.98|Working
-[Fredrik Leemann](https://github.com/freddan88 "Fredrik Leemann GitHub")|macOS High Sierra v10.13.6|Mozilla Firefox v.65.0b8|Working
-[Fredrik Leemann](https://github.com/freddan88 "Fredrik Leemann GitHub")|macOS High Sierra v10.13.6|Safari v.11.1.2|Working
+[Fredrik Leemann](https://github.com/freddan88 "Fredrik Leemann GitHub")|macOS High Sierra v10.13.6|Mozilla Firefox 65.0b8|Working
+[Fredrik Leemann](https://github.com/freddan88 "Fredrik Leemann GitHub")|macOS High Sierra v10.13.6|Safari 11.1.2|Working
+[Fredrik Leemann](https://github.com/freddan88 "Fredrik Leemann GitHub")|Windows 7 Home Premium SP1|Google Chrome 71.0.3578.98|Working
+[Fredrik Leemann](https://github.com/freddan88 "Fredrik Leemann GitHub")|Windows 7 Home Premium SP1|Mozilla Firefox 63.0.3|Working
 
 #### Resources:
 
