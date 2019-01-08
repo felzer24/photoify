@@ -57,8 +57,8 @@ git clone https://github.com/freddan88/photoify.git
 4. Button to edit/delete post (Will only appear on user's own posts)
 5. Like-button for posts (Won't appear on user's own posts) 
 6. Button to edit/delete your account and all of its content
-7. Link to be able to log out from your account and end your session
-8. Errors and success messages will appear on here
+7. Link to log out from your account and end your session
+8. Errors and success messages will appear here
 
 ![Account Desktop](https://github.com/freddan88/Yrgo-assignments/blob/master/03_PHP/photoify/assets/screenshots/account_desktop.jpg)
 
