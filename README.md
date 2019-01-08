@@ -27,14 +27,14 @@ Guide to change the root in MAMP on Mac/Windows:<br/>
 ![mamp-how-to-change-the-root-directory-on-apache-server](https://ruifeio.com/2014/08/08/mamp-how-to-change-the-root-directory-on-apache-server/)
 
 ###### Example Servers and links:
-- ![XAMPP](https://www.apachefriends.org/index.html "Download XAMPP for Windows Linux Mac") 
-- ![WAMP](https://bitnami.com/stack/wamp/installer "Download WAMP for Windows Mac Linux")
-- ![MAMP](https://www.mamp.info/en/downloads "Download MAMP for Mac Windows")
-- ![LAMP Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04 "Install LAMP on Ubuntu Linux")
-- ![LAMP CentOS6](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-centos-6 "Install LAMP on CentOS6 Linux")
-- ![LAMP CentOS7](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-centos-7 "Install LAMP on CentOS7 Linux")
-- ![Git-GUI](https://desktop.github.com/ "Downloads for Mac Windows")
-- ![Git-CLI](https://git-scm.com/downloads "Downloads for Mac Windows Linux/Unix")
+- [XAMPP](https://www.apachefriends.org/index.html "Download XAMPP for Windows Linux Mac"){:target="_blank"}
+- [WAMP](https://bitnami.com/stack/wamp/installer "Download WAMP for Windows Mac Linux"){:target="_blank"}
+- [MAMP](https://www.mamp.info/en/downloads "Download MAMP for Mac Windows"){:target="_blank"}
+- [LAMP Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04 "Install LAMP on Ubuntu Linux"){:target="_blank"}
+- [LAMP CentOS6](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-centos-6 "Install LAMP on CentOS6 Linux"){:target="_blank"}
+- [LAMP CentOS7](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-centos-7 "Install LAMP on CentOS7 Linux"){:target="_blank"}
+- [Git-GUI](https://desktop.github.com/ "Downloads for Mac Windows"){:target="_blank"}
+- [Git-CLI](https://git-scm.com/downloads "Downloads for Mac Windows Linux/Unix"){:target="_blank"}
 
 > Download GIT-CLI or GIT-GUI if you need or want to clone this repository to your computer...
 
