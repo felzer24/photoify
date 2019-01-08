@@ -101,14 +101,13 @@ Name|OS|Browser|Status
 
 ###### [Downloadpage here](https://favicon.io/emoji-favicons/busts-in-silhouette/)
 
-##### Bootstrap 
 ###### _CSS framework_
 [Bootstrap](https://getbootstrap.com/ "The most popular HTML, CSS, and JS library in the world")
 
 ##### Markdown quick reference cheat sheet
 [Markdown cheat sheet](https://en.support.wordpress.com/markdown-quick-reference/ "Markdown quick reference cheat sheet")
 
-##### Zoomable image in markdown
+##### Links to stackoverflow
 [Images in markdown](https://stackoverflow.com/questions/31558605/zoomable-image-in-markdown "Zoomable image in markdown - Stackoverflow")
 
 [Images side by side](https://stackoverflow.com/questions/24319505/how-can-one-display-images-side-by-side-in-a-github-readme-md "How can one display images side by side in a GitHub README.md? - Stackoverflow")
