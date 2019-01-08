@@ -46,9 +46,9 @@ git clone https://github.com/freddan88/photoify.git
 #### Usage:
 
 1. Connect to localhost with your browser (preferably google chrome or mozilla firefox)
-2. On login page you may create a new account by clicking on "Don´t have an account ?"
+2. On the login page you may create a new account by clicking on "Don´t have an account ?"
 3. Sign in through the login form and you will be directed to account.php
-4. See the screenshots below for desktop and mobile view...
+4. See the screenshots below for desktop and mobile views...
 
 ##### Desktop
 1. Profile-module and overview
