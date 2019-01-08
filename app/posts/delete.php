@@ -28,13 +28,19 @@ if (isset($_GET['action']) && $_GET['action'] === 'delete-post-link') {
         exit();
     }
 
-    unlink($dir.$array['content']);
-
     $statement = $pdo->query("DELETE FROM posts WHERE post_id = '$post_id' AND user_id = '$user_id';");
 
     if (!$statement) {
         die(var_dump($pdo->errorInfo()));
     }
+
+    $statement = $pdo->query("DELETE FROM likes WHERE post_id = '$post_id';");
+
+    if (!$statement) {
+        die(var_dump($pdo->errorInfo()));
+    }
+
+    unlink($dir.$array['content']);
 
     $_SESSION['banner']['message'] = 'Successfully deleted post';
     $_SESSION['banner']['class'] = 'alert-success';

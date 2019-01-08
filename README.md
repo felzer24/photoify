@@ -15,9 +15,9 @@ _HTML CSS PHP SQL Javascript Markdown <- Readme.md_
 1. Click the green button "clone or download" at top of this github repository <br/>
 *( You can also use git from terminal or GitHub Desktop to clone this repository to your computer )*
 
-~~2. For easy instalation on Windows, Mac or Linux you can click "Download ZIP"~~
+2. For easy instalation on Windows, Mac or Linux you can click "Download ZIP"
 
-2. [Click this link to download this repository as a zip-file]()
+~~2. [Click this link to download this repository as a zip-file]()~~
 
 3. Extract the compressed zip-archive to the root of your webserver
 
@@ -72,6 +72,7 @@ git clone https://github.com/freddan88/photoify.git
 
 Name|OS|Browser|Status
 -|-|-|-
+[Maria Eidland](https://github.com/mariaeid "Maria Eidland GitHub")|Windows 10|?|?
 [Fredrik Leemann](https://github.com/freddan88 "Fredrik Leemann GitHub")|macOS Yosemite 10.10.5|Mozilla Firefox v.65.0b5|Working
 [Fredrik Leemann](https://github.com/freddan88 "Fredrik Leemann GitHub")|macOS Yosemite 10.10.5|Google Chrome v.72.0.3626.28|Working
 [Fredrik Leemann](https://github.com/freddan88 "Fredrik Leemann GitHub")|macOS High Sierra v10.13.6|Google Chrome 71.0.3578.98|Working
