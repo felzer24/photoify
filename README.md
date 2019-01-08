@@ -9,7 +9,6 @@ _HTML CSS PHP SQL Javascript Markdown <- Readme.md_
 **( In this project we use an sqlite database to store information )**
 
 [Code License: MIT](https://choosealicense.com/licenses/mit/)
-<a href="https://choosealicense.com/licenses/mit/" target="_blank"> Code License: MIT </a>
 
 ### Installation:
 
