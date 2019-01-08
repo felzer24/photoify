@@ -60,7 +60,7 @@ git clone https://github.com/freddan88/photoify.git
 7. Link to log out from your account and end your session
 8. Errors and success messages will appear here
 
-![Account Desktop](https://github.com/freddan88/Yrgo-assignments/blob/master/03_PHP/photoify/assets/screenshots/account_desktop_small.jpg)
+![Account Desktop](https://github.com/freddan88/Yrgo-assignments/blob/master/03_PHP/photoify/assets/screenshots/account_desktop_xs.jpg)
 
 ##### Mobile
 
