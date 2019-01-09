@@ -71,7 +71,7 @@ foreach ($posts as $post): ?>
                 <div class="d-flex justify-content-start align-items-center">
 
                 <?php if ($post['username'] !== $username): ?>
-                    <form method="post" class="my-like-form liked" >
+                    <form method="post" class="my-like-form" >
                         <input type="hidden" name="post_id" value="<?= $post_id ?>" />
                         <input type="hidden" name="action" value="<?= $action ?>" />
                         <button type="submit"><i class="fa fa-heart" aria-hidden="true"></i></button>
