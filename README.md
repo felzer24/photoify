@@ -63,6 +63,11 @@ git clone https://github.com/freddan88/photoify.git
 ![Account Desktop](https://github.com/freddan88/Yrgo-assignments/blob/master/03_PHP/photoify/assets/screenshots/account_desktop_xs.jpg)
 
 ##### Mobile
+1. 
+2. 
+3. 
+
+![Mobile Account](https://github.com/freddan88/Yrgo-assignments/blob/master/03_PHP/photoify/assets/screenshots/account_post_mobile_xs.jpg) ![Mobile Menu](https://github.com/freddan88/Yrgo-assignments/blob/master/03_PHP/photoify/assets/screenshots/account_menu_mobile_xs.jpg)
 
 Todo =)
 
@@ -77,7 +82,7 @@ Todo =)
 * [x] Creations of new posts with images and description
 * [x] Edit published posts
 * [x] Delete published posts
-* [x] like/dislike content
+* [x] like/unlike content
 * [x] Delete your account and all of it´s content
 
 #### Testers:
