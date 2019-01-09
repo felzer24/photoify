@@ -63,13 +63,14 @@ git clone https://github.com/freddan88/photoify.git
 ![Account Desktop](https://github.com/freddan88/Yrgo-assignments/blob/master/03_PHP/photoify/assets/screenshots/account_desktop_xs.jpg)
 
 ##### Mobile
-1. 
-2. 
-3. 
+1. Menu to toggle profile-module and overview
+2. Create post-module
+3. Button to edit/delete post (Will only appear on user's own posts)
+4. Button to edit/delete your account and all of its content
+5. Link to log out from your account and end your session
+6. Profile-module and overview
 
 ![Mobile Account](https://github.com/freddan88/Yrgo-assignments/blob/master/03_PHP/photoify/assets/screenshots/account_post_mobile_xs.jpg) ![Mobile Menu](https://github.com/freddan88/Yrgo-assignments/blob/master/03_PHP/photoify/assets/screenshots/account_menu_mobile_xs.jpg)
-
-Todo =)
 
 #### Functions:
 
