@@ -16,12 +16,12 @@ _HTML CSS PHP SQL Javascript Markdown <- Readme.md_
 *( You can also use git from terminal or GitHub Desktop to clone this repository to your computer )*
 
 2. For easy instalation on Windows, Mac or Linux you can click "Download ZIP"
-
 ~~2. [Click this link to download this repository as a zip-file](https://github.com/freddan88/photoify)~~
 
 3. Extract the compressed zip-archive to the root of your webserver
-
-4. Change the root to point to photoify/photoify-master and start the service
+4. Change the root to point to photoify or photoify-master depending on how you downloaded the project
+5. Start or restart your webserver to load the services and apply the new configuration
+6. Scroll on down this readme for screenshots and to read about usage
 
 Guide to change the root in MAMP on Mac/Windows:<br/>
 [mamp-how-to-change-the-root-directory-on-apache-server](https://ruifeio.com/2014/08/08/mamp-how-to-change-the-root-directory-on-apache-server/)
