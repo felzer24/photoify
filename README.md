@@ -88,12 +88,14 @@ git clone https://github.com/freddan88/photoify.git
 #### Testers:
 Name|OS|Browser|Status
 -|-|-|-
+[Charmaine Wang](https://github.com/charmaine-wang "Charmaine Wang GitHub")|macOS High Sierra 10.13.6|Google Chrome 71.0.3578.98|Working
+[Charmaine Wang](https://github.com/charmaine-wang "Charmaine Wang GitHub")|Iphone IOS 12.1.2|Safari 12.1.2|Working
 [Maria Eidland](https://github.com/mariaeid "Maria Eidland GitHub")|Windows 10 Home|Mozilla Firefox 64.0|Working
 [Fredrik Leemann](https://github.com/freddan88 "Fredrik Leemann GitHub")|macOS Yosemite 10.10.5|Mozilla Firefox 65.0b5|Working
 [Fredrik Leemann](https://github.com/freddan88 "Fredrik Leemann GitHub")|macOS Yosemite 10.10.5|Google Chrome 72.0.3626.28|Working
-[Fredrik Leemann](https://github.com/freddan88 "Fredrik Leemann GitHub")|macOS High Sierra v10.13.6|Google Chrome 71.0.3578.98|Working
-[Fredrik Leemann](https://github.com/freddan88 "Fredrik Leemann GitHub")|macOS High Sierra v10.13.6|Mozilla Firefox 65.0b8|Working
-[Fredrik Leemann](https://github.com/freddan88 "Fredrik Leemann GitHub")|macOS High Sierra v10.13.6|Safari 11.1.2|Working
+[Fredrik Leemann](https://github.com/freddan88 "Fredrik Leemann GitHub")|macOS High Sierra 10.13.6|Google Chrome 71.0.3578.98|Working
+[Fredrik Leemann](https://github.com/freddan88 "Fredrik Leemann GitHub")|macOS High Sierra 10.13.6|Mozilla Firefox 65.0b8|Working
+[Fredrik Leemann](https://github.com/freddan88 "Fredrik Leemann GitHub")|macOS High Sierra 10.13.6|Safari 11.1.2|Working
 [Fredrik Leemann](https://github.com/freddan88 "Fredrik Leemann GitHub")|Windows 7 Home Premium SP1|Google Chrome 71.0.3578.98|Working
 [Fredrik Leemann](https://github.com/freddan88 "Fredrik Leemann GitHub")|Windows 7 Home Premium SP1|Mozilla Firefox 63.0.3|Working
 
