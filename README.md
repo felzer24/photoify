@@ -111,6 +111,9 @@ Name|OS|Browser|Status
 ###### _CSS framework_
 [Bootstrap](https://getbootstrap.com/ "The most popular HTML, CSS, and JS library in the world")
 
+###### _CSS Sanitize_
+[Sanitize](https://cdnjs.com/libraries/10up-sanitize.css "10up-sanitize.css - cdnjs.com")
+
 ##### Markdown quick reference cheat sheet
 [Markdown cheat sheet](https://en.support.wordpress.com/markdown-quick-reference/ "Markdown quick reference cheat sheet")
 
