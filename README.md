@@ -112,11 +112,11 @@ Name|OS|Browser|Status
 [Bootstrap](https://getbootstrap.com/ "The most popular HTML, CSS, and JS library in the world")
 
 ###### _CSS Sanitize CDN_
-[Link here](https://cdnjs.com/libraries/10up-sanitize.css "10up-sanitize.css - cdnjs.com")
+[CDN link here](https://cdnjs.com/libraries/10up-sanitize.css "10up-sanitize.css - cdnjs.com")
 
 ###### _Font Awesome 4.7:_
-[Font Awesome 4.7 CDN](https://www.bootstrapcdn.com/fontawesome/ "Font Awesome - BootstrapCDN by StackPath")
-[Font Awesome 4.7 Icons](https://fontawesome.com/v4.7.0/icons/ "Font Awesome Icons")
+* [Font Awesome 4.7 CDN](https://www.bootstrapcdn.com/fontawesome/ "Font Awesome - BootstrapCDN by StackPath")
+* [Font Awesome 4.7 Icons](https://fontawesome.com/v4.7.0/icons/ "Font Awesome Icons")
 
 ##### Markdown quick reference cheat sheet
 [Markdown cheat sheet](https://en.support.wordpress.com/markdown-quick-reference/ "Markdown quick reference cheat sheet")
