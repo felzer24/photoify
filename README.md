@@ -114,6 +114,12 @@ Name|OS|Browser|Status
 ###### _CSS Sanitize_
 [Sanitize](https://cdnjs.com/libraries/10up-sanitize.css "10up-sanitize.css - cdnjs.com")
 
+###### _Font Awesome 4.7 CDN_
+[Font Awesome 4.7 CDN](https://www.bootstrapcdn.com/fontawesome/ "Font Awesome - BootstrapCDN by StackPath")
+
+###### _Font Awesome 4.7 Icons_
+[Font Awesome 4.7 Icons](https://fontawesome.com/v4.7.0/icons/ "Font Awesome Icons")
+
 ##### Markdown quick reference cheat sheet
 [Markdown cheat sheet](https://en.support.wordpress.com/markdown-quick-reference/ "Markdown quick reference cheat sheet")
 
