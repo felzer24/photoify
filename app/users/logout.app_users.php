@@ -4,6 +4,11 @@ declare(strict_types=1);
 
 require __DIR__.'/../autoload.php';
 
+if (!isset($_SESSION['logedin'])) {
+    redirect('/');
+    exit();
+}
+
 if (isset($_GET['clicked'])) {
 
     session_unset();
