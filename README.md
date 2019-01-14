@@ -111,13 +111,11 @@ Name|OS|Browser|Status
 ###### _CSS framework_
 [Bootstrap](https://getbootstrap.com/ "The most popular HTML, CSS, and JS library in the world")
 
-###### _CSS Sanitize_
-[Sanitize](https://cdnjs.com/libraries/10up-sanitize.css "10up-sanitize.css - cdnjs.com")
+###### _CSS Sanitize CDN_
+[Link here](https://cdnjs.com/libraries/10up-sanitize.css "10up-sanitize.css - cdnjs.com")
 
-###### _Font Awesome 4.7 CDN_
+###### _Font Awesome 4.7:_
 [Font Awesome 4.7 CDN](https://www.bootstrapcdn.com/fontawesome/ "Font Awesome - BootstrapCDN by StackPath")
-
-###### _Font Awesome 4.7 Icons_
 [Font Awesome 4.7 Icons](https://fontawesome.com/v4.7.0/icons/ "Font Awesome Icons")
 
 ##### Markdown quick reference cheat sheet
@@ -129,3 +127,5 @@ Name|OS|Browser|Status
 [Images side by side](https://stackoverflow.com/questions/24319505/how-can-one-display-images-side-by-side-in-a-github-readme-md "How can one display images side by side in a GitHub README.md? - Stackoverflow")
 
 ---
+
+YRGO - Christmas Assignment 2018 ( php ) - 2019-01-17 09:00 URL [www.leemann.se/fredrik](http://www.leemann.se/fredrik)
