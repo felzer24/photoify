@@ -80,13 +80,13 @@
 
                                                 <div class="form-group">
                                                     <label for="cpassword" class="float-left">Update password</label>
-                                                    <input id="cpassword" class="form-control" name="cpassword" type="password" placeholder="Current password" />
+                                                    <input id="cpassword" class="form-control" name="cpassword" type="password" placeholder="Current password" autocomplete="off" />
                                                 </div>
                                                 <div class="form-group">
-                                                    <input id="npassword" class="form-control" name="npassword" type="password" placeholder="Set a new password" />
+                                                    <input id="npassword" class="form-control" name="npassword" type="password" placeholder="Set a new password" autocomplete="off" />
                                                 </div>
                                                 <div class="form-group">
-                                                    <input id="rpassword" class="form-control" name="rpassword" type="password" placeholder="Repeat new password" />
+                                                    <input id="rpassword" class="form-control" name="rpassword" type="password" placeholder="Repeat new password" autocomplete="off" />
                                                 </div>
 
                                                 <button type="submit" class="btn btn-success my-2" name="update_profile-btn"><i class="fa fa-floppy-o pr-1" aria-hidden="true"></i>Save Changes</button>
