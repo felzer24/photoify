@@ -128,4 +128,4 @@ Name|OS|Browser|Status
 
 ---
 
-<center>YRGO - Christmas Assignment 2018 ( php ) - 2019-01-17 09:00 URL [www.leemann.se/fredrik](http://www.leemann.se/fredrik)</center>
+YRGO - Christmas Assignment 2018 ( php ) - 2019-01-17 09:00 URL [www.leemann.se/fredrik](http://www.leemann.se/fredrik)
