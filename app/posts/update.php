@@ -19,6 +19,11 @@ if (isset($_POST['update-post-btn'])) {
     $postdesc = $_POST['postdesc'];
     $filename = $_POST['filename'];
 
+    if(isOwnerofPost($pdo, $post_id, $user_id) === false){
+        redirect('/');
+        exit();
+    }
+
     if (isset($_FILES['postfile']) && !empty($_FILES['postfile']['size'])) {
 
         $post_files = $_FILES['postfile'];

@@ -9,15 +9,20 @@ if (!isset($_SESSION['logedin'])) {
     exit();
 }
 
-$user_id = $_SESSION['logedin']['user_id'];
-
 $dir = __DIR__.'/../../assets/images/posts/';
 
 $_SESSION['banner']['class'] = 'alert-danger';
 
 if (isset($_GET['action']) && $_GET['action'] === 'delete-post-link') {
 
+    $user_id = $_SESSION['logedin']['user_id'];
+
     $post_id = $_GET['post_id'];
+
+    if(isOwnerofPost($pdo, $post_id, $user_id) === false){
+        redirect('/');
+        exit();
+    }
 
     $statement = $pdo->query("SELECT * FROM posts WHERE post_id = '$post_id' AND user_id = '$user_id';");
 
