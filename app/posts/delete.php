@@ -14,12 +14,11 @@ $dir = __DIR__.'/../../assets/images/posts/';
 $_SESSION['banner']['class'] = 'alert-danger';
 
 if (isset($_GET['action']) && $_GET['action'] === 'delete-post-link') {
-
     $user_id = $_SESSION['logedin']['user_id'];
 
     $post_id = $_GET['post_id'];
 
-    if(isOwnerofPost($pdo, $post_id, $user_id) === false){
+    if (isOwnerofPost($pdo, $post_id, $user_id) === false) {
         redirect('/');
         exit();
     }
@@ -56,8 +55,6 @@ if (isset($_GET['action']) && $_GET['action'] === 'delete-post-link') {
     $_SESSION['banner']['class'] = 'alert-success';
     redirect('/account.php');
     exit();
-
 } else {
-
     redirect('/account.php');
 }

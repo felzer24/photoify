@@ -10,7 +10,6 @@ if (!isset($_SESSION['logedin'])) {
 }
 
 if (isset($_POST['update-post-btn'])) {
-
     $_SESSION['banner']['class'] = 'alert-danger';
     $dir = __DIR__.'/../../assets/images/posts/';
 
@@ -19,13 +18,12 @@ if (isset($_POST['update-post-btn'])) {
     $postdesc = $_POST['postdesc'];
     $filename = $_POST['filename'];
 
-    if(isOwnerofPost($pdo, $post_id, $user_id) === false){
+    if (isOwnerofPost($pdo, $post_id, $user_id) === false) {
         redirect('/');
         exit();
     }
 
     if (isset($_FILES['postfile']) && !empty($_FILES['postfile']['size'])) {
-
         $post_files = $_FILES['postfile'];
 
         if (!in_array($post_files['type'], ['image/jpeg', 'image/png', 'image/gif'])) {
@@ -48,11 +46,9 @@ if (isset($_POST['update-post-btn'])) {
         $destination = $dir.$filename;
 
         move_uploaded_file($post_files['tmp_name'], $destination);
-
     }
 
     if (isset($_POST['postdesc']) && !empty($_POST['postdesc'])) {
-
         $postdesc = trim(filter_var($_POST['postdesc'], FILTER_SANITIZE_STRING));
 
         if (strlen($postdesc) > 100) {
@@ -77,8 +73,6 @@ if (isset($_POST['update-post-btn'])) {
     $_SESSION['banner']['class'] = 'alert-success';
     redirect('/account.php');
     exit();
-
-}  else {
-
+} else {
     redirect('/account.php');
 }

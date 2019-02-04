@@ -17,7 +17,7 @@ if ($profile_files['size'] > 2097152) {
     exit();
 }
 
-if ($profile_pic !== 'default_profile.png'){
+if ($profile_pic !== 'default_profile.png') {
     unlink($dir.$profile_pic);
 }
 

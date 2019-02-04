@@ -10,7 +10,6 @@ if (!isset($_SESSION['logedin'])) {
 }
 
 if (isset($_GET['action']) && $_GET['action'] === 'delete-account-link') {
-
     $user_id = $_SESSION['logedin']['user_id'];
     $username = $_SESSION['logedin']['username'];
 
@@ -62,14 +61,10 @@ if (isset($_GET['action']) && $_GET['action'] === 'delete-account-link') {
         session_destroy();
         redirect('/');
         exit();
-
     } else {
-
         redirect('/account.php');
         exit();
     }
-
 } else {
-
     redirect('/account.php');
 }

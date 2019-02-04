@@ -5,7 +5,6 @@ declare(strict_types=1);
 require __DIR__.'/../autoload.php';
 
 if (isset($_POST['signup-btn'])) {
-
     $email = trim(filter_var($_POST['email'], FILTER_SANITIZE_EMAIL));
     $fullname = trim(filter_var($_POST['fullname'], FILTER_SANITIZE_STRING));
     $username = trim(filter_var($_POST['username'], FILTER_SANITIZE_STRING));
@@ -90,9 +89,6 @@ if (isset($_POST['signup-btn'])) {
     unset($_SESSION['values']);
     redirect('/');
     exit();
-
 } else {
-
     redirect('/signup.php');
-
 }

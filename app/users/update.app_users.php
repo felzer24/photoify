@@ -20,7 +20,6 @@ $timezone = $_SESSION['logedin']['timezone'];
 $email = $_SESSION['logedin']['email'];
 
 if (isset($_POST['update_profile-btn'])) {
-
     if (isset($_FILES['profile_pic']) && !empty($_FILES['profile_pic']['size'])) {
         require __DIR__.'/update_modules/module_avatar.php';
     }
@@ -30,7 +29,7 @@ if (isset($_POST['update_profile-btn'])) {
     }
 
     if (isset($_POST['email']) && !empty($_POST['email'])) {
-        if ($email !== $_POST['email']){
+        if ($email !== $_POST['email']) {
             require __DIR__.'/update_modules/module_email.php';
         }
     }
@@ -45,8 +44,7 @@ if (isset($_POST['update_profile-btn'])) {
         $_SESSION['logedin']['timezone'] = $timezone;
     }
 
-    if (isset($_POST['cpassword'], $_POST['npassword'], $_POST['rpassword'])){
-
+    if (isset($_POST['cpassword'], $_POST['npassword'], $_POST['rpassword'])) {
         $cpassword = $_POST['cpassword'];
         $npassword = $_POST['npassword'];
         $rpassword = $_POST['rpassword'];
@@ -82,7 +80,6 @@ if (isset($_POST['update_profile-btn'])) {
     $_SESSION['page']['error'] = 'no';
     redirect('/account.php');
     exit();
-
 } else {
     redirect('/account.php');
 }

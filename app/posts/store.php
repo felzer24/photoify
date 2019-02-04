@@ -10,13 +10,11 @@ if (!isset($_SESSION['logedin'])) {
 }
 
 if (isset($_POST['timeline_post-btn'])) {
-
     $dir = __DIR__.'/../../assets/images/posts/';
     $user_id = $_SESSION['logedin']['user_id'];
     $_SESSION['banner']['class'] = 'alert-danger';
 
     if (isset($_FILES['postfile']) && !empty($_FILES['postfile']['size'])) {
-
         $post_files = $_FILES['postfile'];
 
         if (!in_array($post_files['type'], ['image/jpeg', 'image/png', 'image/gif'])) {
@@ -37,7 +35,6 @@ if (isset($_POST['timeline_post-btn'])) {
         $destination = $dir.$filename;
 
         move_uploaded_file($post_files['tmp_name'], $destination);
-
     } else {
         $_SESSION['banner']['message'] = 'You need to provide a file to be able to post';
         redirect('/account.php');
@@ -45,18 +42,14 @@ if (isset($_POST['timeline_post-btn'])) {
     }
 
     if (isset($_POST['postdesc']) && !empty($_POST['postdesc'])) {
-
         $post_desc = trim(filter_var($_POST['postdesc'], FILTER_SANITIZE_STRING));
 
         if (strlen($post_desc) > 100) {
             $_SESSION['errors']['post_desc'] = 'Max 100 characters';
             $_SESSION['logedin']['post_desc'] = '';
         }
-
     } else {
-
         $post_desc = "No description";
-
     }
 
     if (isset($_SESSION['errors']) && count($_SESSION['errors']) > 0) {
@@ -80,7 +73,6 @@ if (isset($_POST['timeline_post-btn'])) {
     $_SESSION['banner']['class'] = 'alert-success';
     redirect('/account.php');
     exit();
-
 } else {
     redirect('/account.php');
 }

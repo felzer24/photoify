@@ -5,7 +5,6 @@ declare(strict_types=1);
 require __DIR__.'/../autoload.php';
 
 if (isset($_POST['login-btn'])) {
-
     $_SESSION['banner']['class'] = 'alert-danger';
 
     $username = trim(filter_var($_POST['username'], FILTER_SANITIZE_STRING));
@@ -39,16 +38,12 @@ if (isset($_POST['login-btn'])) {
     $credentials = $statement->fetch(PDO::FETCH_ASSOC);
 
     if ($credentials != true || password_verify($password, $credentials['password']) != true) {
-
         unset($_SESSION['errors']);
         $_SESSION['banner']['message'] = 'You provided wrong credentials';
         redirect('/');
         exit();
-
     } else {
-
         if (password_verify($password, $credentials['password'])) {
-
             $_SESSION['logedin'] = [
                 'user_id' => $credentials['user_id'],
                 'email' => $credentials['email'],
@@ -65,8 +60,6 @@ if (isset($_POST['login-btn'])) {
             exit();
         }
     }
-
 } else {
-
     redirect('/');
 }

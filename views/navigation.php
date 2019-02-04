@@ -32,7 +32,7 @@
     $my_timezone = date_timezone_get($datetime);
 
     $timezones=[
-        str_replace('_','',"$timezone") => $timezone,
+        str_replace('_', '', "$timezone") => $timezone,
         'Europe/Stockholm' => 'Europe/Stockholm',
         'Europe/London' => 'Europe/London',
         'America/New York' => 'America/New_York',

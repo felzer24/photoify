@@ -10,14 +10,11 @@ if (!isset($_SESSION['logedin'])) {
 }
 
 if (isset($_GET['clicked'])) {
-
     session_unset();
     session_destroy();
 
     redirect('/');
     exit();
-
 } else {
-
     redirect('/account.php');
 }
