@@ -3,6 +3,8 @@
 > Christmas assignment 2018 in PHP at Yrgo in Sweden Gothenburg. Deadline for: 2019-01-17 09:00 
 This assignment is called photoify and is a supposed to mimic instagram functionalities like user account creation, log in features + more
 
+[![StyleCI](https://github.styleci.io/repos/161168895/shield?branch=master)](https://github.styleci.io/repos/161168895)
+
 _Languages Used:_ <br/>
 _HTML CSS PHP SQL Javascript Markdown <- Readme.md_
 
