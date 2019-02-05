@@ -61,7 +61,7 @@ git clone https://github.com/freddan88/photoify.git
 7. Link to log out from your account and end your session
 8. Errors and success messages will appear here
 
-![Account Desktop](https://github.com/freddan88/Yrgo-assignments/blob/master/03_PHP/photoify/assets/screenshots/account_desktop_xs.jpg)
+![Account Desktop](https://github.com/freddan88/Yrgo-assignments/blob/master/03.PHP/photoify/assets/screenshots/account_desktop_xs.jpg)
 
 ##### Mobile
 1. Menu to toggle profile-module and overview
@@ -71,7 +71,7 @@ git clone https://github.com/freddan88/photoify.git
 5. Link to log out from your account and end your session
 6. Profile-module and overview
 
-![Mobile Account](https://github.com/freddan88/Yrgo-assignments/blob/master/03_PHP/photoify/assets/screenshots/account_post_mobile_xs.jpg) ![Mobile Menu](https://github.com/freddan88/Yrgo-assignments/blob/master/03_PHP/photoify/assets/screenshots/account_menu_mobile_xs.jpg)
+![Mobile Account](https://github.com/freddan88/Yrgo-assignments/blob/master/03.PHP/photoify/assets/screenshots/account_post_mobile_xs.jpg) ![Mobile Menu](https://github.com/freddan88/Yrgo-assignments/blob/master/03.PHP/photoify/assets/screenshots/account_menu_mobile_xs.jpg)
 
 #### Functions:
 
